@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    background-color: #6f2327;
+}
+a {
+    text-decoration: none;
+    color: #fffdf6;
+    font-size: 35px;
+}
+a:hover {
+    color: #ffcc5c;
+}
+.title {
+    flex: 5;
+    justify-content: center;
+    display: flex;
+}
+
+.cart {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.material-icons {
+    display: inline-block;
+    font-size: 50px;
+ }
+
