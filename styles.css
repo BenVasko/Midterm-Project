@@ -137,13 +137,14 @@ header a:hover, .cart:hover {
 .popup-image img {
     max-width: 100%;
 }
-.popup-price {
+.popup-price, .carousel-price {
     font-size: 16px;
+    text-align: center;
 }
 .product-popup p {
     text-align: center;
 }
-.adjust-quantity {
+.adjust-quantity, .carousel-adjust-quantity {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -245,7 +246,11 @@ display: none;
     width: 90%;
     background: #ffcc5c;
 }
-
+.close{
+    position: absolute;
+    right: 5%;
+    top: 0;
+}
 /* For Desktop */
 
 @media only screen and (min-width: 1200px) {
@@ -272,8 +277,15 @@ display: none;
     .description {
         font-size: 24px;
     }    
+    .carousel-price {
+        font-size: 20px;
+       text-align: center;
+    }
+    .slideOutCart {
+        width: 50%;
+        margin-top: 1%;
+    }
 }
-
  
   
 

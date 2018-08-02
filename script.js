@@ -1,16 +1,5 @@
 " use strict";
 $(document).ready(() => {
-//     const hideItemPopups = () => {
-//         $(".product-popup").toggle();
-//     }
-
-//     const hideCart = () => {
-//         $(".slideOutCartParent").toggle();
-//     }
-//     hideCart();
-
-
-// hideItemPopups();
 
 // Toggle Popups
 // Vinyl
@@ -98,17 +87,15 @@ $(".product-popup-tix2").click((e) => {
     $("#hidePopupTix2").toggle();
 });
 // End Toggle Popups
-
-// $("body").on("click", "a.cart", (e) => {
-//     $(".slideOutCartParent").slideToggle(1000);
-// });
-
+// Make Cart Popout
 $("body").on("click", ".cart", (e) => {
     $("#hideCart").toggle();
-    console.log("test")
 });
-$(".slideOutCartParent").click((e) => {
+$(".close").click((e) => {
     $("#hideCart").toggle();
 });
+// End Cart Popout
 
+// Adrean: toggle button class and make carousel items match button
+// John: add items to cart when clicked, item count over cart
 });
