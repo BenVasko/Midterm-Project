@@ -1,6 +1,10 @@
 " use strict";
 $(document).ready(() => {
 
+    $("#apparelcarousel").show();
+        $("#musiccarousel").hide();
+        $("#collectiblescarousel").hide();
+        $("#ticketscarousel").hide();
 
 //     const hideItemPopups = () => {
 //         $(".product-popup").toggle();
@@ -110,5 +114,41 @@ $(".close").click((e) => {
 // End Cart Popout
 
 // Adrean: toggle button class and make carousel items match button
+
+$(".button").click((e) => {
+    $(".button").removeClass("carousel-active");
+    $(".button").addClass("carousel-inactive");
+    $( e.target ).removeClass("carousel-inactive").addClass("carousel-active");
+    switch (e.target.id) {
+        case "button-music":
+        $("#apparelcarousel").hide();
+        $("#musiccarousel").show();
+        $("#collectiblescarousel").hide();
+        $("#ticketscarousel").hide();
+            break;
+        case "button-apparel":
+        $("#apparelcarousel").show();
+        $("#musiccarousel").hide();
+        $("#collectiblescarousel").hide();
+        $("#ticketscarousel").hide();
+            break;
+        case "button-tickets":
+        $("#apparelcarousel").hide();
+        $("#musiccarousel").hide();
+        $("#collectiblescarousel").hide();
+        $("#ticketscarousel").show();
+            break;
+        case "button-collectibles":
+        $("#apparelcarousel").hide();
+        $("#musiccarousel").hide();
+        $("#collectiblescarousel").show();
+        $("#ticketscarousel").hide();
+            break;
+    }
+  });
+
+  
+
+  
 // John: add items to cart when clicked, item count over cart
 });
