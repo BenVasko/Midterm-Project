@@ -28,10 +28,6 @@ header a:hover {
     font-family: 'Times New Roman', Times, serif;
 }
 .cart {
-    /* justify-content: flex-end;
-    display: flex;
-    align-items: center;
-    padding-right: 10px; */
     float: right;
     text-align: center;
     padding-right: 10px;
@@ -49,7 +45,7 @@ header a:hover {
     padding: 30px 0;
 }
 #bandpic {
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 .container2 {
@@ -61,17 +57,23 @@ header a:hover {
 .btngroup {
     font-size: 0px;
 }
-.button{
+.button {
     color: #fffdf6;
     border: none;
     padding: 5px;   
-    border-radius: 5px;
     box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3);
     width: 25%;
     cursor: pointer;
+    font-size: 16px;
+}
+.button:nth-child(1) {
+    border-top-left-radius: 5px;
+}
+.button:nth-child(4) {
+    border-top-right-radius: 5px;
 }
 .yellow {
-    background-color:#ffcc5c;
+    background-color:#ffcc5c;  
 }
 .yellow:hover {
     background-color: #FFE877;
@@ -82,6 +84,11 @@ header a:hover {
 .burgundy:hover{
     background-color: #8B3C3D;
 }
+
+
+/* This is the carousel css styling */
+.carousel-inner {
+    height: 250px;
 
 
  /* This denotes the CSS for the popup for the item */
@@ -192,69 +199,26 @@ header a:hover {
 .description {
     font-size: 10px;
 }
-/* //carousel */
-.slides {
-    height:250px;
-    position:relative;
-    width:325px;
-    margin:0 auto;
+
 }
-.slides1{
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    opacity:0;
-    transition: all 0.5s ease-in-out;
+.carousel-inner > .carousel-item > img {
+    width: 325px;
+    height: 250px;
+  }
+
+/* Carousel buy buttons */
+.carouselbuy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 5%;
+    margin: 0 auto;
+    background: #ebeae6;
+    color: #000;
 }
-.arrow{
-    position:absolute;
-    top:0;
-    display:block;
-    width:50px;
-    height:100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    background: url("http://dancort.es/assets/img/css-carousel/carousel-arrow-dark.png") 50% 50% / 20px no-repeat;
-}
-.arrow-prev{
-    left:0;
-}
-.arrow-next{
-    right:0;
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-.light{
-    color:white;
-}
-  /*Select every element*/
-[id^="item"] {
-      display: none;
-    }
-.item-1 {
-    z-index: 2;
-    opacity: 1;
-    background:url("pictures/album-art.jpg");
-    background-size:cover;
-}
-.item-2{
-    background:url('pictures/black-shirt.jpg');
-    background-size:cover;
-}
-.item-3{
-    background:url('pictures/burgundy-shirt.jpg');
-    background-size:cover;
-}
-*:target ~ .item-1 {
-    opacity: 0;
-}
-#item-1:target ~ .item-1 {
-    opacity: 1;
-}
-#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
-    z-index: 3;
-    opacity: 1;
-}
-  
+
+
+
+ 
   

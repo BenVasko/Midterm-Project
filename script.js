@@ -4,6 +4,7 @@ const hideItemPopups = () => {
     $(".product-popup").toggle();
 }
 
+
 // hideItemPopups();
 
 // Vinyl
@@ -62,3 +63,4 @@ $("To be Determined").click((e) => {
 $(".product-popup-p1").click((e) => {
     $("#hidePopupP2").toggle();
 });
+
