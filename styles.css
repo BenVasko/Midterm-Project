@@ -9,7 +9,7 @@ body {
 header {
     display: flex;
     background-color: #6f2327;
-    font-size: 40px;
+    font-size: 30px;
     height: 55px;
 }
 header a {
@@ -24,6 +24,7 @@ header a:hover {
     justify-content: center;
     display: flex;
     align-items: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 .cart {
     justify-content: flex-end;
@@ -34,3 +35,52 @@ header a:hover {
 .material-icons {
     font-size: 30px;
 }
+.bandpicbox {
+    margin: 0 auto;
+    height: 250px;
+    width: 325px;
+    padding: 25px 0;
+}
+#bandpic {
+    height: 100%;
+    width: 100%;
+}
+.btngroup {
+    margin: 0 auto;
+    width: 325px;
+    font-size: 0px;
+}
+.button{
+    color: #fffdf6;
+    border: none;
+    padding: 5px;   
+    border-radius: 5px;
+    box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3);
+    width: 25%;
+    cursor: pointer;
+}
+.yellow {
+    background-color:#ffcc5c;
+}
+.yellow:hover {
+    background-color: #FFE877;
+}
+.burgundy {
+    background-color: #6f2327;
+}
+.burgundy:hover{
+    background-color: #8B3C3D;
+}
+
+
+
+/* .button yellow{
+    background-color:#ffcc5c;
+    color: #fffdf6;
+    border: none;
+    padding: 5px;   
+    border-radius: 5px;
+    box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3);
+    width: 25%;
+    cursor: pointer;
+} */
