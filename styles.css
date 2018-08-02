@@ -85,9 +85,121 @@ header a:hover {
     background-color: #8B3C3D;
 }
 
+
 /* This is the carousel css styling */
 .carousel-inner {
     height: 250px;
+
+
+ /* This denotes the CSS for the popup for the item */
+ #hidePopupBurgundy{
+    display: none;
+}
+#hidePopupBlack{
+    display: none;
+}
+ .product-popup-burgundy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 40%;
+    /* overflow: auto; */
+    padding: 5%;
+    margin: 0 auto;
+    margin-top: 10%;
+    background: #ebeae6;
+    color: #000;
+    z-index: 999999;
+    box-shadow: 0 0 0 5000000px rgba(0,0,0,0.3);
+    position: fixed;
+    }
+.product-popup-black {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+        height: 40%;
+        /* overflow: auto; */
+        padding: 5%;
+        margin: 0 auto;
+        margin-top: 10%;
+        background: #ebeae6;
+        color: #000;
+        z-index: 999999;
+        box-shadow: 0 0 0 5000000px rgba(0,0,0,0.3);
+        position: fixed;
+        }
+.popup-price, .popup-addToCart, .description {
+    margin: 2% auto;
+    height:20%;
+    width: 100%;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    height: 5%;
+    width: 100%;
+    font-size: 10px;
+    margin-bottom: 4%;
+}
+
+.popup-header .material-icons {
+    color: #979797;
+    cursor: pointer;
+}
+
+.popup-image {
+    margin: 0 auto;
+    border: 3px solid black;
+    margin-top: 30%;
+    /* margin: 2% auto; */
+    height:20%;
+    width: 100%;
+}
+
+.popup-image img {
+    max-width: 100%;
+}
+
+.popup-price {
+    font-size: 10px;
+}
+
+.product-popup p {
+    text-align: center;
+}
+
+.adjust-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 10px;
+}
+
+.adjust-quantity .material-icons {
+    color: #6f2327;
+    cursor: pointer;
+}
+
+.popup-addToCart {
+    width: 90%;
+    height: 7%;
+    background: #ffcc5c;
+    color: #000;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 6px;
+    cursor: pointer;
+    margin-bottom: 5%;
+}
+
+.description {
+    font-size: 10px;
+}
+
 }
 .carousel-inner > .carousel-item > img {
     width: 325px;
@@ -106,84 +218,7 @@ header a:hover {
     color: #000;
 }
 
- /* This denotes the CSS for the popup for the item */
-.product-popup {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
-    /* height: 80%;
-    overflow: auto; */
-    padding: 5%;
-    margin: 0 auto;
-    margin-top: 10%;
-    background: #ebeae6;
-    color: #000;
-    z-index: 999999;
-    box-shadow: 0 0 0 5000000px rgba(0,0,0,0.3)
-}
 
-.popup-image, .popup-price, .popup-addToCart, .description {
-    margin: 2% auto;
-}
 
-.popup-header {
-    display: flex;
-    justify-content: space-between;
-    height: 5%;
-    width: 100%;
-    font-size: 30px;
-    margin-bottom: 4%;
-}
-
-.popup-header .material-icons {
-    color: #979797;
-    cursor: pointer;
-}
-
-.popup-image {
-    margin: 0 auto;
-    border: 3px solid black;
-}
-
-.popup-image img {
-    max-width: 100%;
-}
-
-.popup-price {
-    font-size: 30px;
-}
-
-.product-popup p {
-    text-align: center;
-}
-
-.adjust-quantity {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 24px;
-}
-
-.adjust-quantity .material-icons {
-    color: #6f2327;
-    cursor: pointer;
-}
-
-.popup-addToCart {
-    width: 90%;
-    height: 7%;
-    background: #ffcc5c;
-    color: #000;
-    margin: 0 auto;
-    font-weight: bold;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.description {
-    font-size: 16px;
-}
-
+ 
   
