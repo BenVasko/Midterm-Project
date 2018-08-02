@@ -74,7 +74,8 @@ header a:hover, .cart:hover {
     border-top-right-radius: 5px;
 }
 .yellow {
-    background-color:#ffcc5c;  
+    background-color:#ffcc5c; 
+    color: black; 
 }
 .yellow:hover {
     background-color: #FFE877;
@@ -181,10 +182,11 @@ header a:hover, .cart:hover {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    padding: 5%;
     margin: 0 auto;
     background: #ebeae6;
     color: #000;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 /* SLIDE OUT CART*/
 .slideOutCartParent {
