@@ -1,5 +1,6 @@
 " use strict";
 $(document).ready(() => {
+
 //     const hideItemPopups = () => {
 //         $(".product-popup").toggle();
 //     }
@@ -10,7 +11,7 @@ $(document).ready(() => {
 //     hideCart();
 
 
-// hideItemPopups();
+    
 
 // Toggle Popups
 // Vinyl
