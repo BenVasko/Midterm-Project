@@ -235,7 +235,9 @@ header a:hover {
     height: 100%;
     display: flex;
     justify-content: flex-end;
+    position: absolute;
     z-index: 9999999999999;
+    top: 0;
 }
 
 .slideOutCart {
