@@ -6,3 +6,6 @@ const hideItemPopups = () => {
 
 hideItemPopups();
 
+const blackShirt = () => {
+    $("body").on("click", "#blackShirt", hideItemPopups())
+}
