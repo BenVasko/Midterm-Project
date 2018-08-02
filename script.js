@@ -4,5 +4,5 @@ const hideItemPopups = () => {
     $(".product-popup").toggle();
 }
 
-hideItemPopups();
+// hideItemPopups();
 

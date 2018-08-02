@@ -90,15 +90,14 @@ header a:hover {
     flex-direction: column;
     justify-content: center;
     width: 80%;
-    /* height: 80%;
-    overflow: auto; */
     padding: 5%;
     margin: 0 auto;
     margin-top: 10%;
     background: #ebeae6;
     color: #000;
     z-index: 999999;
-    box-shadow: 0 0 0 5000000px rgba(0,0,0,0.3)
+    box-shadow: 0 0 0 5000000px rgba(0,0,0,0.3);
+    border-radius: 20px;
 }
 
 .popup-image, .popup-price, .popup-addToCart, .description {
@@ -111,7 +110,7 @@ header a:hover {
     height: 5%;
     width: 100%;
     font-size: 30px;
-    margin-bottom: 4%;
+    margin-bottom: 5%;
 }
 
 .popup-header .material-icons {
@@ -162,6 +161,7 @@ header a:hover {
 
 .description {
     font-size: 16px;
+    font-style: italic;
 }
 /* //carousel */
 .slides {
