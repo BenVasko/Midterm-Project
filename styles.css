@@ -84,146 +84,96 @@ header a:hover {
 .burgundy:hover{
     background-color: #8B3C3D;
 }
-
-
 /* This is the carousel css styling */
 .carousel-inner {
     height: 250px;
-
-
+}
  /* This denotes the CSS for the popup for the item */
- #hidePopupBurgundy{
+ #hidePopupBurgundy, #hidePopupBlack, #hidePopupWhite, #hidePopupHat, #hidePopupP1, #hidePopupP2, #hidePopupCD, #hidePopupVinyl {
     display: none;
 }
-#hidePopupBlack{
-    display: none;
-}
- .product-popup-burgundy {
+.product-popup-burgundy, .product-popup-black, .product-popup-white, .product-popup-cd, .product-popup-vinyl, .product-popup-p1, .product-popup-p2, .product-popup-hat {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     width: 80%;
-    height: 40%;
-    /* overflow: auto; */
-
     padding: 5%;
-    margin: 0 auto;
-    margin-top: 10%;
     background: #ebeae6;
     color: #000;
     z-index: 999999;
     box-shadow: 0 0 0 5000000px rgba(0,0,0,0.3);
-
+    position: absolute;
     border-radius: 20px;
+    top: 10%;
+    left: 10%;
 }
-
-.popup-image, .popup-price, .popup-addToCart, .description {
-
-    position: fixed;
-    }
-.product-popup-black {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 40%;
-        height: 40%;
-        /* overflow: auto; */
-        padding: 5%;
-        margin: 0 auto;
-        margin-top: 10%;
-        background: #ebeae6;
-        color: #000;
-        z-index: 999999;
-        box-shadow: 0 0 0 5000000px rgba(0,0,0,0.3);
-        position: fixed;
-        }
 .popup-price, .popup-addToCart, .description {
-
     margin: 2% auto;
-    height:20%;
-    width: 100%;
+    height: 20%;
+    width: 90%;
+    text-align: center;
 }
-
 .popup-header {
     display: flex;
     justify-content: space-between;
     height: 5%;
     width: 100%;
-
     font-size: 10px;
     margin-bottom: 4%;
-
 }
-
 .popup-header .material-icons {
     color: #979797;
     cursor: pointer;
 }
-
 .popup-image {
     margin: 0 auto;
     border: 3px solid black;
-    margin-top: 30%;
-    /* margin: 2% auto; */
+    margin-top: 5%;
     height:20%;
     width: 100%;
 }
-
 .popup-image img {
     max-width: 100%;
 }
-
 .popup-price {
-    font-size: 10px;
+    font-size: 16px;
 }
-
 .product-popup p {
     text-align: center;
 }
-
 .adjust-quantity {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
-
-    font-size: 10px;
-
+    font-size: 16px;
 }
-
 .adjust-quantity .material-icons {
     color: #6f2327;
     cursor: pointer;
 }
-
 .popup-addToCart {
     width: 90%;
-    height: 7%;
+    height: 9%;
     background: #ffcc5c;
     color: #000;
     margin: 0 auto;
     font-weight: bold;
-    font-size: 6px;
+    font-size: 16px;
     cursor: pointer;
     margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 .description {
-
     font-size: 16px;
     font-style: italic;
-}
-
-}
-
 }
 .carousel-inner > .carousel-item > img {
     width: 325px;
     height: 250px;
   }
-
 /* Carousel buy buttons */
 .carouselbuy {
     display: flex;
@@ -235,8 +185,6 @@ header a:hover {
     background: #ebeae6;
     color: #000;
 }
-
-
 /* SLIDE OUT CART*/
 .slideOutCartParent {
     width: 100%;
@@ -247,7 +195,6 @@ header a:hover {
     z-index: 9999999999999;
     top: 0;
 }
-
 .slideOutCart {
     background: #ebeae6;
     width: 90%;
@@ -260,7 +207,6 @@ header a:hover {
     border-bottom-left-radius: 20px;
     margin: 0;
 }
-
 .cart-header {
     display: flex;
     flex-direction: row;
@@ -268,44 +214,36 @@ header a:hover {
     margin: 2% 2%;
     font-family: 'Times New Roman', Times, serif;
 }
-
 .itemsInCart {
     margin: 4% auto;
     width: 90%;
 }
-
 .updateClear {
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
     width: 70%;
 }
-
 .slideOutCart button {
     height: 7%;
     margin: 2% auto;
     font-size: 20px;
 }
-
 .update-button, .clear-button {
     width: 45%;
 }
-
 .update-button {
     background: #8B3C3D;
     color: #ebeae6;
 }
-
 .clear-button {
     background: #6f2327;
     color: #ebeae6;
 }
-
 .checkout-button {
     width: 90%;
     background: #ffcc5c;
 }
-
 
 
  

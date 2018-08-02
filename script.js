@@ -30,14 +30,14 @@ $(".product-popup-cd").click((e) => {
     $("#hidePopupCD").toggle();
 });
 // burgundy shirt
-$(".item-3").click((e) => {
+$("body").on("click", "#burgundyShirt", (e) => {
     $("#hidePopupBurgundy").toggle();
 });
 $(".product-popup-burgundy").click((e) => {
     $("#hidePopupBurgundy").toggle();
 });
 // black shirt
-$(".item-2").click((e) => {
+$("body").on("click", "#blackShirt", (e) => {
     $("#hidePopupBlack").toggle();
 });
 $(".product-popup-black").click((e) => {
