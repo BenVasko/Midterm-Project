@@ -1,19 +1,12 @@
 " use strict";
 $(document).ready(() => {
-    const hideItemPopups = () => {
-        $(".product-popup").toggle();
-    }
-
     const hideCart = () => {
         $(".slideOutCartParent").toggle();
     }
 
-
-
     hideCart();
 
-
-// hideItemPopups();
+    
 
 // Vinyl
 $("To be Determined").click((e) => {

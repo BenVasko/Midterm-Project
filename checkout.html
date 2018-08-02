@@ -10,104 +10,110 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-
-    <!--poster #3-->
-    <section class="product-popup">
-        <section class="popup-header">
-            <h1>Poster - Release Tour Promo</h1>
-            <i class="material-icons">clear</i>
-        </section>
-        <section class="popup-image">
-            <img src="pictures/poster-3.jpg">
-        </section>
-        <p class="popup-price" >$5.00</p>
-        <section class="adjust-quantity">
-                <i class="material-icons">remove</i>1<i class="material-icons">add</i>
-        </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
-
-        <section class="description">
-                <p>A poster featuring the promo photo from the release tour of "Blind".</p>
-        </section>
-    </section>
-    <!--cymbal-->
-    <section class="product-popup">
-        <section class="popup-header">
-            <h1>"SD" Cymbals</h1>
-            <i class="material-icons">clear</i>
-        </section>
-        <section class="popup-image">
-            <img src="pictures/music-video-cymbal.jpg">
-        </section>
-        <p class="popup-price" >$30.00</p>
-        <section class="adjust-quantity">
-                <i class="material-icons">remove</i>1<i class="material-icons">add</i>
-        </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
-
-        <section class="description">
-                <p>Purchase one of the cymbals used in the "Skin Deep" music video! (ONLY 4 AVAILABLE)</p>
-        </section>
-    </section>
-    <!--Tix 1-->
-    <section class="product-popup">
-        <section class="popup-header">
-            <h1>Tix - July 21st</h1>
-            <i class="material-icons">clear</i>
-        </section>
-        <section class="popup-image">
-            <img src="pictures/july21show.jpg">
-        </section>
-        <p class="popup-price" >$8.00</p>
-        <section class="adjust-quantity">
-                <i class="material-icons">remove</i>
-                1
-                <i class="material-icons">add</i>
-        </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
-
-        <section class="description">
-                <p>Purchase a ticket to Castle No Kings' upcoming battle of the bands show with Rogue, Homegrownups, The Harbor Divide, and Ice Cream Militia at the Civic in Toledo, OH.</p>
-        </section>
-    </section>
-    <!--Tix 2-->
-    <section class="product-popup">
-        <section class="popup-header">
-            <h1>Tix - Aug 18th</h1>
-            <i class="material-icons">clear</i>
-        </section>
-        <section class="popup-image">
-            <img src="pictures/aug18show.jpg">
-        </section>
-        <p class="popup-price" >$5.00</p>
-        <section class="adjust-quantity">
-                <i class="material-icons">remove</i>1<i class="material-icons">add</i>
-        </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
-
-        <section class="description">
-                <p>Purchase a ticket to Castle No Kings' upcoming show with Wild Nights, Homegrownups, Rogue, Into the Wild, and For Granted the Sky at Frankie's in Toledo, OH.</p>
-        </section>
-    </section>
-
-    <!--CODE FOR SLIDE OUT CART-->
-    <section class="slideOutCartParent">
-        <section class="slideOutCart">
-            <section class="cart-header">
-                <h1>CART</h1>
-                <i class="material-icons">clear</i>
-            </section>
-            <section class="itemsInCart"></section>
-            <section class="updateClear">
-                <button class="update-button" type="button">UPDATE</button>
-                <button class="clear-button" type="button">CLEAR</button>
-            </section>
-            <button class="checkout-button" type="button">CHECKOUT</button>
-        </section>
-    </seection>
-
+<section class="checkout-page">
     <h1>CHECKOUT</h1>
+
+    <section class="checkout-cart">
+        <section class="checkout-cart-header">
+            <p>YOUR CART</p>
+            <button class="clear-cart" type="button">CLEAR</button>
+            <button class="update-cart" type="button">UPDATE</button>
+        </section>
+        <section class="column1"></section>
+        <section class="column2"></section>
+        <section class="column3"></section>
+        <section class="column4"></section>
+        <section class="column5"></section>
+        <section class="column6"></section>
+    </section>
+
+    <section class="checkout-order-summary">
+        <p>ORDER SUMMARY</p>
+        <section class="subtotal">
+            <p>Your Cart</p>
+            <section></section>
+        </section>
+        <section class="tax">
+            <p>Tax</p>
+            <section></section>
+        </section>
+        <section class="total">
+            <p>TOTAL</p>
+            <section></section>
+        </section>
+    </section>
+
+    <section class="way-to-pay">
+        <button class="cash">CASH</button>
+        <button class="credit">CREDIT</button>
+        <form class="cash-form">
+            <section class="amount-due">
+                <p>Amount Due</p>
+                <section></section>
+            </section>
+            <section class="amount-tendered">
+                <input type="text" placeholder="Amount Tendered">
+                <button type="button">SUBMIT</button>
+            </section>
+            <section class="change-due">
+                <p>Change Due</p>
+                <section></section>
+            </section>
+        </form>
+        <form class="credit-form">
+            <input type="text" placeholder="Name As It Appears On Card">
+            <input type="text" placeholder="Card Number">
+            <section>
+                <section>
+                    <p>Expiration Date</p>
+                    <input list="months" name="month">
+                    <datalist id="months">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        <option value="5">
+                        <option value="6">
+                        <option value="7">
+                        <option value="8">
+                        <option value="9">
+                        <option value="10">
+                        <option value="11">
+                        <option value="12">
+                    </datalist>
+                    <input list="years" name="year">
+                    <datalist id="years">
+                        <option value="2018">
+                        <option value="2019">
+                        <option value="2020">
+                        <option value="2021">
+                        <option value="2022">
+                        <option value="2023">
+                        <option value="2024">
+                        <option value="2025">
+                        <option value="2026">
+                        <option value="2027">
+                        <option value="2028">
+                        <option value="2029">
+                        <option value="2030">
+                        <option value="2031">
+                        <option value="2032">
+                        <option value="2033">
+                        <option value="2034">
+                        <option value="2035">
+                        <option value="2036">
+                        <option value="2037">
+                        <option value="2038">
+                    </datalist>
+                </section>
+                <input type="text" placeholder="CVV">
+            </section>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </section>
+</section>
+
+    <button class="place-order" type="button">PLACE ORDER</button>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="script.js"></script>

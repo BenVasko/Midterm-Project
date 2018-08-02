@@ -231,18 +231,23 @@ header a:hover {
 }
 .update-button, .clear-button {
     width: 45%;
-}
-.update-button {
-    background: #8B3C3D;
-    color: #ebeae6;
-}
-.clear-button {
     background: #6f2327;
     color: #ebeae6;
 }
+
 .checkout-button {
     width: 90%;
     background: #ffcc5c;
+    font-weight: bold;
+}
+
+.checkout-page {
+    color: #ebeae6;
+    
+}
+
+datalist {
+    display: none;
 }
 
 
