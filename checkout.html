@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>CHECKOUT</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i" rel="stylesheet">
@@ -13,21 +13,15 @@
 
 <!-- Ben: Finish HTML/CSS of checkout page -->
 
-    <!--CODE FOR SLIDE OUT CART-->
-    <section class="slideOutCartParent">
-        <section class="slideOutCart">
-            <section class="cart-header">
-                <h1>CART</h1>
-                <i class="material-icons">clear</i>
-
 <section class="checkout-page">
     <h1>CHECKOUT</h1>
+    <a href="index.html">(continue shopping)</a>
 
     <section class="checkout-cart">
         <section class="checkout-cart-header">
             <p>YOUR CART</p>
-            <button class="clear-cart" type="button">CLEAR</button>
-            <button class="update-cart" type="button">UPDATE</button>
+            <button class="clear-cart burgundy" type="button">CLEAR</button>
+            <button class="update-cart burgundy" type="button">UPDATE</button>
         </section>
         <section class="columns">
             <section class="column1"></section>
@@ -57,8 +51,8 @@
 
     <section class="way-to-pay">
         <section class="cash-credit">
-            <button class="cash">CASH</button>
-            <button class="credit">CREDIT</button>
+            <button class="cash burgundy">CASH</button>
+            <button class="credit burgundy">CREDIT</button>
         </section>
         <form class="cash-form">
             <section class="amount-due">
@@ -68,7 +62,7 @@
             </section>
             <section class="amount-tendered">
                 <input type="text" placeholder="Amount Tendered">
-                <button type="button">SUBMIT</button>
+                <button class="burgundy" type="button">SUBMIT</button>
             </section>
             <section class="change-due">
                 <p>Change Due</p>
@@ -81,13 +75,13 @@
                 <section>$10.00</section>
             </section>
             <section class="name-number">
-                <input type="text" placeholder="Name As It Appears On Card">
-                <input type="text" placeholder="Card Number">
+                <input class="ccname" type="text" placeholder="Name As It Appears">
+                <input class="ccnumber" type="text" placeholder="Card Number">
             </section>
             <section>
                 <section class="exp-date">
                     <p>Exp Date</p>
-                    <input list="months" name="month">
+                    <input list="months" name="month" class="month">
                     <datalist id="months">
                         <option value="01">
                         <option value="02">
@@ -102,7 +96,7 @@
                         <option value="11">
                         <option value="12">
                     </datalist>
-                    <input list="years" name="year">
+                    <input list="years" name="year" class="year">
                     <datalist id="years">
                         <option value="2018">
                         <option value="2019">
@@ -130,10 +124,10 @@
                 </section>
                 
             </section>
-            <button type="submit">SUBMIT</button>
+            <button class="credit-submit burgundy" type="submit">SUBMIT</button>
         </form>
     </section>
-    <button class="place-order" type="button">PLACE ORDER</button>
+    <button id="place-order" type="button">PLACE ORDER</button>
 </section>
 
     

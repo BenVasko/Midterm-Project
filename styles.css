@@ -35,9 +35,11 @@ header a:hover, .cart:hover {
     position: absolute;
     right: 1%;
     top: 20%;
+    cursor: pointer;
 }
 .material-icons {
     font-size: 30px;
+    cursor: pointer;
 }
 .bandpicbox {
     margin: 0 auto;
@@ -76,12 +78,14 @@ header a:hover, .cart:hover {
 .yellow {
     background-color:#ffcc5c; 
     color: black; 
+    cursor: pointer;
 }
 .yellow:hover {
     background-color: #FFE877;
 }
 .burgundy {
     background-color: #6f2327;
+    cursor: pointer;
 }
 .burgundy:hover{
     background-color: #8B3C3D;
@@ -127,6 +131,11 @@ header a:hover, .cart:hover {
     color: #979797;
     cursor: pointer;
 }
+
+.popup-header .material-icons:hover {
+    color: #6b6b6b;
+}
+
 .popup-image {
     margin: 0 auto;
     border: 3px solid black;
@@ -151,10 +160,15 @@ header a:hover, .cart:hover {
     align-items: center;
     font-size: 16px;
 }
-.adjust-quantity .material-icons {
+.adjust-quantity .material-icons, .carousel-adjust-quantity .material-icons {
     color: #6f2327;
     cursor: pointer;
 }
+
+.adjust-quantity .material-icons:hover, .carousel-adjust-quantity .material-icons:hover {
+    color: #8B3C3D;
+}
+
 .popup-addToCart, .carousel-addToCart {
     width: 90%;
     height: 9%;
@@ -169,6 +183,10 @@ header a:hover, .cart:hover {
     justify-content: center;
     align-items: center;
 }
+.popup-addToCart:hover, .carousel-addToCart:hover {
+    background: #FFE877;
+}
+
 .description {
     font-size: 16px;
     font-style: italic;
@@ -237,6 +255,12 @@ display: none;
     color: #ebeae6;
 }
 
+/*CHECKOUT PAGE*/
+
+.columns {
+    margin: 1% auto;
+}
+
 .checkout-button {
     width: 90%;
     background: #ffcc5c;
@@ -251,52 +275,106 @@ display: none;
     width: 100%;
     text-align: center;
 }
+.checkout-page a {
+    text-decoration: none;
+    color: #000;
+}
+
+.checkout-page a:hover {
+    color: #979797;
+    cursor: pointer;
+}
 
 .checkout-page button {
     background: #6f2327;
     color: #fffdf6;
-    padding: 2px;
+    padding: 4px;
+    height: 4%;
+    width: 30%;
+    cursor: pointer;
+}
+
+.checkout-page h1 {
+    font-size: 40px;
+}
+
+.checkout-page input {
+    height: 4%;
+    font-size: 16px;
 }
 
 .cash-credit {
     display: flex;
-    margin: 0 auto;
+    width: 80%;
+    margin: 1.5% auto;
+    justify-content: center
 }
 
 .checkout-cart, .checkout-order-summary, .way-to-pay, .cash-form, .credit-form, .name-number {
     display: flex;
     flex-direction: column;
     width: 80%;
-    margin: 0 auto;
+    margin: 1.5% auto;
 }
 
 .subtotal, .tax, .total {
     display: flex;
     width: 80%;
-    margin: 0 auto;
+    margin: 1.5% auto;
     justify-content: space-between;
 }
 
 .amount-due, .change-due {
     display: flex;
     width: 100%;
-    margin: 0 auto;
+    margin: 1.5% auto;
     justify-content: space-between;
 }
 
 .exp-date {
     display: flex;
     width: 100%;
+    margin: 2% auto;
     justify-content: space-around;
+    align-items: center;
 }
 
 .exp-date input {
-    width: 20%;
+    width: 23%;
+}
+
+.ccnumber, .ccname {
+    margin: 3% auto;
+    width: 80%;
 }
 
 datalist {
     display: none;
 }
+
+.credit-submit {
+    width: 70%;
+    margin: 1.5% auto;
+}
+
+#place-order {
+    background: #ffcc5c;
+    color: #000;
+    font-weight: bold;
+    height: 7%;
+    width: 100%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#place-order:hover {
+    background: #FFE877;
+}
+
+.cash, .credit {
+    width: 100%;
+}
+
 .close{
     position: absolute;
     right: 5%;
