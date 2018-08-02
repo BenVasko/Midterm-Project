@@ -1,25 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <title>Castle No Kings</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <section class="title"><a href="">CASTLE NO KINGS</a></section>
-        <a href="" class="cart"><i class="material-icons">shopping_cart</i></a>
+        <section class="title">
+            <a href="">CASTLE NO KINGS</a>
+        </section>
+        <a href="" class="cart">
+            <i class="material-icons">shopping_cart</i>
+        </a>
     </header>
 
     <section class="bandpicbox">
         <img id="bandpic" src="pictures/band-promo-pic.jpg" alt="Castle No Kings Picture">
     </section>
-    
+  <!--shirt #2-->
+  <section class="product-popup" id="hidePopup">
+        <section class="popup-header">
+            <h1>Shirt - Black</h1>
+            <i class="material-icons" id="clear">clear</i>
+        </section>
+        <section class="popup-image" id="blackShirt">
+            <img src="pictures/black-shirt.jpg">
+        </section>
+        <p class="popup-price">$20.00</p>
+        <section class="adjust-quantity">
+            <i class="material-icons">remove</i>1
+            <i class="material-icons">add</i>
+        </section>
+        <button class="popup-addToCart" type="button">ADD TO CART</button>
+
+        <section class="description">
+            <p>A short-sleeved black shirt featuring a drawing theorizing how vision works by ancient greeks.</p>
+        </section>
+    </section>
+    <!-- end popup for black shirt -->
     <section class="container2">
         <section class="btngroup">
             <button class="button yellow">Apparel</button>
@@ -27,7 +52,7 @@
             <button class="button burgundy">Posters</button>
             <button class="button burgundy">Tickets</button>
         </section>
-        <section class="slides"> 
+        <section class="slides">
             <span id="item-1"></span>
             <span id="item-2"></span>
             <span id="item-3"></span>
@@ -38,14 +63,16 @@
             <div class="slides1 item-2">
                 <a class="arrow arrow-prev" href="#item-1"></a>
                 <a class="arrow arrow-next" href="#item-3"></a>
-            </div>
-            <div class="slides1 item-3">
-                <a class="arrow arrow-prev" href="#item-2"></a>
-                <a class="arrow arrow-next" href="#item-1"></a>
-            </div>
         </section>
+        </div>
+        <div class="slides1 item-3">
+            <a class="arrow arrow-prev" href="#item-2"></a>
+            <a class="arrow arrow-next" href="#item-1"></a>
+        </div>
+    </section>
     </section>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

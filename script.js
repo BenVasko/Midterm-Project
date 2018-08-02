@@ -4,8 +4,13 @@ const hideItemPopups = () => {
     $(".product-popup").toggle();
 }
 
-hideItemPopups();
+// hideItemPopups();
 
-const blackShirt = () => {
-    $("body").on("click", "#blackShirt", hideItemPopups())
-}
+$(".item-2").click((e) => {
+    $("#hidePopup").toggle();
+    console.log("hi");
+});
+$(".product-popup").click((e) => {
+    $("#hidePopup").toggle();
+    console.log("hi");
+});
