@@ -3,34 +3,85 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background-color: #000;
+}
 header {
     display: flex;
     background-color: #6f2327;
+    font-size: 30px;
+    height: 55px;
+    position: relative;
 }
-a {
+header a {
     text-decoration: none;
     color: #fffdf6;
-    font-size: 35px;
 }
-a:hover {
+header a:hover {
     color: #ffcc5c;
 }
 .title {
-    flex: 5;
+    flex: 1;
     justify-content: center;
     display: flex;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
 }
-
 .cart {
-    justify-content: flex-end;
+    /* justify-content: flex-end;
     display: flex;
+    align-items: center;
+    padding-right: 10px; */
+    float: right;
+    text-align: center;
+    padding-right: 10px;
+    position: absolute;
+    right: 1%;
+    top: 20%;
 }
-
 .material-icons {
-    display: inline-block;
-    font-size: 50px;
- }
-
+    font-size: 30px;
+}
+.bandpicbox {
+    margin: 0 auto;
+    height: 250px;
+    width: 325px;
+    padding: 30px 0;
+}
+#bandpic {
+    height: 100%;
+    width: 100%;
+}
+.container2 {
+    margin: 0 auto;
+    width: 325px;
+    font-size: 0px;
+    padding: 30px 0;
+}
+.btngroup {
+    font-size: 0px;
+}
+.button{
+    color: #fffdf6;
+    border: none;
+    padding: 5px;   
+    border-radius: 5px;
+    box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3);
+    width: 25%;
+    cursor: pointer;
+}
+.yellow {
+    background-color:#ffcc5c;
+}
+.yellow:hover {
+    background-color: #FFE877;
+}
+.burgundy {
+    background-color: #6f2327;
+}
+.burgundy:hover{
+    background-color: #8B3C3D;
+}
 
 
  /* This denotes the CSS for the popup for the item */
@@ -112,3 +163,69 @@ a:hover {
 .description {
     font-size: 16px;
 }
+/* //carousel */
+.slides {
+    height:250px;
+    position:relative;
+    width:325px;
+    margin:0 auto;
+}
+.slides1{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity:0;
+    transition: all 0.5s ease-in-out;
+}
+.arrow{
+    position:absolute;
+    top:0;
+    display:block;
+    width:50px;
+    height:100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    background: url("http://dancort.es/assets/img/css-carousel/carousel-arrow-dark.png") 50% 50% / 20px no-repeat;
+}
+.arrow-prev{
+    left:0;
+}
+.arrow-next{
+    right:0;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.light{
+    color:white;
+}
+  /*Select every element*/
+[id^="item"] {
+      display: none;
+    }
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+    background:url("pictures/album-art.jpg");
+    background-size:cover;
+}
+.item-2{
+    background:url('pictures/black-shirt.jpg');
+    background-size:cover;
+}
+.item-3{
+    background:url('pictures/burgundy-shirt.jpg');
+    background-size:cover;
+}
+*:target ~ .item-1 {
+    opacity: 0;
+}
+#item-1:target ~ .item-1 {
+    opacity: 1;
+}
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+}
+  
+  
