@@ -242,8 +242,54 @@ header a:hover {
 }
 
 .checkout-page {
-    color: #ebeae6;
-    
+    background: #ebeae6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.checkout-page button {
+    background: #6f2327;
+    color: #fffdf6;
+    padding: 2px;
+}
+
+.cash-credit {
+    display: flex;
+    margin: 0 auto;
+}
+
+.checkout-cart, .checkout-order-summary, .way-to-pay, .cash-form, .credit-form, .name-number {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.subtotal, .tax, .total {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.amount-due, .change-due {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.exp-date {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.exp-date input {
+    width: 20%;
 }
 
 datalist {
