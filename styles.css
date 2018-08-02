@@ -3,32 +3,34 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background-color: #000;
+}
 header {
     display: flex;
     background-color: #6f2327;
+    font-size: 40px;
+    height: 55px;
 }
-a {
+header a {
     text-decoration: none;
     color: #fffdf6;
-    font-size: 35px;
 }
-a:hover {
+header a:hover {
     color: #ffcc5c;
 }
 .title {
-    flex: 5;
+    flex: 1;
     justify-content: center;
     display: flex;
+    align-items: center;
 }
-
 .cart {
     justify-content: flex-end;
     display: flex;
+    align-items: center;
+    padding-right: 10px;
 }
-
 .material-icons {
-    display: inline-block;
-    font-size: 50px;
- }
-
-
+    font-size: 30px;
+}
