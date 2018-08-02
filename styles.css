@@ -85,10 +85,13 @@ header a:hover {
 
 
  /* This denotes the CSS for the popup for the item */
- #hidePopup{
+ #hidePopupBurgundy{
     display: none;
 }
- .product-popup {
+#hidePopupBlack{
+    display: none;
+}
+ .product-popup-burgundy {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,6 +107,22 @@ header a:hover {
     box-shadow: 0 0 0 5000000px rgba(0,0,0,0.3);
     position: fixed;
     }
+.product-popup-black {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+        height: 40%;
+        /* overflow: auto; */
+        padding: 5%;
+        margin: 0 auto;
+        margin-top: 10%;
+        background: #ebeae6;
+        color: #000;
+        z-index: 999999;
+        box-shadow: 0 0 0 5000000px rgba(0,0,0,0.3);
+        position: fixed;
+        }
 .popup-price, .popup-addToCart, .description {
     margin: 2% auto;
     height:20%;
