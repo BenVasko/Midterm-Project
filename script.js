@@ -4,5 +4,10 @@ const hideItemPopups = () => {
     $(".product-popup").toggle();
 }
 
-// hideItemPopups();
+const hideCart = () => {
+    $(".slideOutCart").toggle();
+}
+
+hideItemPopups();
+hideCart();
 
