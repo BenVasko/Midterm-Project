@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <!-- Ben: Finish HTML/CSS of checkout page -->
 
     <!--CODE FOR SLIDE OUT CART-->
@@ -18,17 +19,124 @@
             <section class="cart-header">
                 <h1>CART</h1>
                 <i class="material-icons">clear</i>
-            </section>
-            <section class="itemsInCart"></section>
-            <section class="updateClear">
-                <button class="update-button" type="button">UPDATE</button>
-                <button class="clear-button" type="button">CLEAR</button>
-            </section>
-            <button class="checkout-button" type="button">CHECKOUT</button>
-        </section>
-    </seection>
 
+<section class="checkout-page">
     <h1>CHECKOUT</h1>
+
+    <section class="checkout-cart">
+        <section class="checkout-cart-header">
+            <p>YOUR CART</p>
+            <button class="clear-cart" type="button">CLEAR</button>
+            <button class="update-cart" type="button">UPDATE</button>
+        </section>
+        <section class="columns">
+            <section class="column1"></section>
+            <section class="column2"></section>
+            <section class="column3"></section>
+            <section class="column4"></section>
+            <section class="column5"></section>
+            <section class="column6"></section>
+        </section>
+    </section>
+
+    <section class="checkout-order-summary">
+        <p>ORDER SUMMARY</p>
+        <section class="subtotal">
+            <p>Subtotal</p>
+            <section>$8.00</section>
+        </section>
+        <section class="tax">
+            <p>Tax</p>
+            <section>$2.00</section>
+        </section>
+        <section class="total">
+            <p>TOTAL</p>
+            <section>$10.00</section>
+        </section>
+    </section>
+
+    <section class="way-to-pay">
+        <section class="cash-credit">
+            <button class="cash">CASH</button>
+            <button class="credit">CREDIT</button>
+        </section>
+        <form class="cash-form">
+            <section class="amount-due">
+                <p>Amount Due</p>
+                <section>$10.00</section>
+
+            </section>
+            <section class="amount-tendered">
+                <input type="text" placeholder="Amount Tendered">
+                <button type="button">SUBMIT</button>
+            </section>
+            <section class="change-due">
+                <p>Change Due</p>
+                <section>$10.00</section>
+            </section>
+        </form>
+        <form class="credit-form">
+            <section class="amount-due">
+                <p>Amount Due</p>
+                <section>$10.00</section>
+            </section>
+            <section class="name-number">
+                <input type="text" placeholder="Name As It Appears On Card">
+                <input type="text" placeholder="Card Number">
+            </section>
+            <section>
+                <section class="exp-date">
+                    <p>Exp Date</p>
+                    <input list="months" name="month">
+                    <datalist id="months">
+                        <option value="01">
+                        <option value="02">
+                        <option value="03">
+                        <option value="04">
+                        <option value="05">
+                        <option value="06">
+                        <option value="07">
+                        <option value="08">
+                        <option value="09">
+                        <option value="10">
+                        <option value="11">
+                        <option value="12">
+                    </datalist>
+                    <input list="years" name="year">
+                    <datalist id="years">
+                        <option value="2018">
+                        <option value="2019">
+                        <option value="2020">
+                        <option value="2021">
+                        <option value="2022">
+                        <option value="2023">
+                        <option value="2024">
+                        <option value="2025">
+                        <option value="2026">
+                        <option value="2027">
+                        <option value="2028">
+                        <option value="2029">
+                        <option value="2030">
+                        <option value="2031">
+                        <option value="2032">
+                        <option value="2033">
+                        <option value="2034">
+                        <option value="2035">
+                        <option value="2036">
+                        <option value="2037">
+                        <option value="2038">
+                    </datalist>
+                    <input class="cvv" type="text" placeholder="CVV">
+                </section>
+                
+            </section>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </section>
+    <button class="place-order" type="button">PLACE ORDER</button>
+</section>
+
+    
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="script.js"></script>

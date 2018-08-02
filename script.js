@@ -1,6 +1,19 @@
 " use strict";
 $(document).ready(() => {
 
+
+//     const hideItemPopups = () => {
+//         $(".product-popup").toggle();
+//     }
+
+//     const hideCart = () => {
+//         $(".slideOutCartParent").toggle();
+//     }
+//     hideCart();
+
+
+
+
 // Toggle Popups
 // Vinyl
 $("body").on("click", "#vinyl", (e) => {
