@@ -32,3 +32,83 @@ a:hover {
  }
 
 
+
+ /* This denotes the CSS for the popup for the item */
+.product-popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    /* height: 80%;
+    overflow: auto; */
+    padding: 5%;
+    margin: 0 auto;
+    margin-top: 10%;
+    background: #ebeae6;
+    color: #000;
+    z-index: 999999;
+    box-shadow: 0 0 0 5000000px rgba(0,0,0,0.3)
+}
+
+.popup-image, .popup-price, .popup-addToCart, .description {
+    margin: 2% auto;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    height: 5%;
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: 4%;
+}
+
+.popup-header .material-icons {
+    color: #979797;
+    cursor: pointer;
+}
+
+.popup-image {
+    margin: 0 auto;
+    border: 3px solid black;
+}
+
+.popup-image img {
+    max-width: 100%;
+}
+
+.popup-price {
+    font-size: 30px;
+}
+
+.product-popup p {
+    text-align: center;
+}
+
+.adjust-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 24px;
+}
+
+.adjust-quantity .material-icons {
+    color: #6f2327;
+    cursor: pointer;
+}
+
+.popup-addToCart {
+    width: 90%;
+    height: 7%;
+    background: #ffcc5c;
+    color: #000;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.description {
+    font-size: 16px;
+}
