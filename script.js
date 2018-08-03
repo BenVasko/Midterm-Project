@@ -44,7 +44,7 @@ $(".product-popup-burgundy").click((e) => {
 $("body").on("click", "#blackShirt", (e) => {
     $("#hidePopupBlack").toggle();
 });
-$(".product-popup-black").click((e) => {
+$("#close").click((e) => {
     $("#hidePopupBlack").toggle();
 });
 // White Shirt
@@ -151,4 +151,8 @@ $(".button").click((e) => {
 
   
 // John: add items to cart when clicked, item count over cart
+$("body").on("click", ".popup-addToCart", (e) => {
+    console.log($(".popup-price").text())
+    console.log("hi")
+});
 });
