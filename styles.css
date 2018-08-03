@@ -75,19 +75,19 @@ header a:hover, .cart:hover {
 .button:nth-child(4) {
     border-top-right-radius: 5px;
 }
-.yellow {
+.carousel-active {
     background-color:#ffcc5c; 
     color: black; 
     cursor: pointer;
 }
-.yellow:hover {
+.carousel-active:hover {
     background-color: #FFE877;
 }
-.burgundy {
+.carousel-inactive {
     background-color: #6f2327;
     cursor: pointer;
 }
-.burgundy:hover{
+.carousel-inactive:hover{
     background-color: #8B3C3D;
 }
 /* This is the carousel css styling */
