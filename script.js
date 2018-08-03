@@ -1,6 +1,6 @@
 " use strict";
 $(document).ready(() => {
-
+    let total = 0;
     $("#apparelcarousel").show();
     $("#musiccarousel").hide();
     $("#collectiblescarousel").hide();
@@ -213,12 +213,14 @@ $(document).ready(() => {
             <section class="itemQuantity">
                 <input type="number" value="${$(".blkShirtQty").val()}">
             </section>
-                <section class="itemPrice"> @${($("#blkShirtPrice").text())} each</section>
+                <section class="itemPrice"> @${($(".price").val())} each</section>
                 <button type="button">
                     <i class="material-icons">clear</i>
                 </button>
             </section>
         </section>`)
+        $(".total").text(null);
+        $(".total").append(`$${total += $(".blkShirtQty").val() * $(".price").val()}`)
         $("#hidePopupBlack").hide();
         $(".hideAdded").toggle();
     });
@@ -373,7 +375,7 @@ $("body").on("click", ".closeAdded", (e) => {
     $("body").on("click", ".cdQtyAdd", (e) => {
         let qty = $(".cdQty").val();
         qty++;
-        $(".cdQty").val(qty);;
+        $(".cdQty").val(qty);
     });
 
     $("body").on("click", ".cdQtyRemove", (e) => {
@@ -392,7 +394,7 @@ $("body").on("click", ".closeAdded", (e) => {
     $("body").on("click", ".vinylQtyAdd", (e) => {
         let qty = $(".vinylQty").val();
         qty++;
-        $(".vinylQty").val(qty);;
+        $(".vinylQty").val(qty);
     });
 
     $("body").on("click", ".vinylQtyRemove", (e) => {
@@ -411,7 +413,7 @@ $("body").on("click", ".closeAdded", (e) => {
     $("body").on("click", ".blkShirtQtyAdd", (e) => {
         let qty = $(".blkShirtQty").val();
         qty++;
-        $(".blkShirtQty").val(qty);;
+        $(".blkShirtQty").val(qty);
     });
 
     $("body").on("click", ".blkShirtQtyRemove", (e) => {
@@ -430,7 +432,7 @@ $("body").on("click", ".closeAdded", (e) => {
     $("body").on("click", ".burShirtQtyAdd", (e) => {
         let qty = $(".burShirtQty").val();
         qty++;
-        $(".burShirtQty").val(qty);;
+        $(".burShirtQty").val(qty);
     });
 
     $("body").on("click", ".burShirtQtyRemove", (e) => {
@@ -449,7 +451,7 @@ $("body").on("click", ".closeAdded", (e) => {
     $("body").on("click", ".whiteShirtQtyAdd", (e) => {
         let qty = $(".whiteShirtQty").val();
         qty++;
-        $(".whiteShirtQty").val(qty);;
+        $(".whiteShirtQty").val(qty);
     });
 
     $("body").on("click", ".whiteShirtQtyRemove", (e) => {
@@ -468,7 +470,7 @@ $("body").on("click", ".closeAdded", (e) => {
     $("body").on("click", ".hatQtyAdd", (e) => {
         let qty = $(".hatQty").val();
         qty++;
-        $(".hatQty").val(qty);;
+        $(".hatQty").val(qty);
     });
     
     $("body").on("click", ".hatQtyRemove", (e) => {
@@ -487,7 +489,7 @@ $("body").on("click", ".closeAdded", (e) => {
     $("body").on("click", ".post1ShirtQtyAdd", (e) => {
         let qty = $(".post1Qty").val();
         qty++;
-        $(".post1Qty").val(qty);;
+        $(".post1Qty").val(qty);
     });
     
     $("body").on("click", ".post1QtyRemove", (e) => {
@@ -506,7 +508,7 @@ $("body").on("click", ".closeAdded", (e) => {
     $("body").on("click", ".post2QtyAdd", (e) => {
         let qty = $(".post2Qty").val();
         qty++;
-        $(".post2Qty").val(qty);;
+        $(".post2Qty").val(qty);
     });
     
     $("body").on("click", ".post2QtyRemove", (e) => {
@@ -525,7 +527,7 @@ $("body").on("click", ".closeAdded", (e) => {
     $("body").on("click", ".post3QtyAdd", (e) => {
         let qty = $(".post3Qty").val();
         qty++;
-        $(".post3Qty").val(qty);;
+        $(".post3Qty").val(qty);
     });
     
     $("body").on("click", ".post3QtyRemove", (e) => {
@@ -544,7 +546,7 @@ $("body").on("click", ".closeAdded", (e) => {
     $("body").on("click", ".cymQtyAdd", (e) => {
         let qty = $(".cymQty").val();
         qty++;
-        $(".cymQty").val(qty);;
+        $(".cymQty").val(qty);
     });
     
     $("body").on("click", ".cymQtyRemove", (e) => {
@@ -563,7 +565,7 @@ $("body").on("click", ".closeAdded", (e) => {
     $("body").on("click", ".tix1QtyAdd", (e) => {
         let qty = $(".tix1Qty").val();
         qty++;
-        $(".tix1Qty").val(qty);;
+        $(".tix1Qty").val(qty);
     });
     
     $("body").on("click", ".tix1QtyRemove", (e) => {
@@ -582,7 +584,7 @@ $("body").on("click", ".closeAdded", (e) => {
     $("body").on("click", ".tix2QtyAdd", (e) => {
         let qty = $(".tix2Qty").val();
         qty++;
-        $(".tix2Qty").val(qty);;
+        $(".tix2Qty").val(qty);
     });
     
     $("body").on("click", ".tix2QtyRemove", (e) => {
