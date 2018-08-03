@@ -301,7 +301,7 @@ $(document).ready(() => {
                     <button type="button">
                         <i class="material-icons">remove</i>
                     </button>
-                    <input type="text" value="${$(".cymbalQty").val()}">
+                    <input type="text" value="${$(".cymQty").val()}">
                         <button type="button">
                             <i class="material-icons">add</i>
                         </button>
@@ -324,7 +324,7 @@ $(document).ready(() => {
                     <button type="button">
                         <i class="material-icons">remove</i>
                     </button>
-                    <input type="text" value="${$(".p1Qty").val()}">
+                    <input type="text" value="${$(".post1Qty").val()}">
                         <button type="button">
                             <i class="material-icons">add</i>
                         </button>
@@ -347,7 +347,7 @@ $(document).ready(() => {
                     <button type="button">
                         <i class="material-icons">remove</i>
                     </button>
-                    <input type="text" value="${$(".p2Qty").val()}">
+                    <input type="text" value="${$(".post2Qty").val()}">
                         <button type="button">
                             <i class="material-icons">add</i>
                         </button>
@@ -370,7 +370,7 @@ $(document).ready(() => {
                             <button type="button">
                                 <i class="material-icons">remove</i>
                             </button>
-                            <input type="text" value="${$(".p3Qty").val()}">
+                            <input type="text" value="${$(".post3Qty").val()}">
                                 <button type="button">
                                     <i class="material-icons">add</i>
                                 </button>
@@ -408,9 +408,9 @@ $(document).ready(() => {
         $(".hideAdded").toggle();
     });
     // End Add Tix 1
-// Add Tix 2
-$("body").on("click", "#tickets2", (e) => {
-    $(".itemContainer").append(`<section class="items">
+    // Add Tix 2
+    $("body").on("click", "#tickets2", (e) => {
+        $(".itemContainer").append(`<section class="items">
                         <section class="itemName">${$(".nameTix2").text()}</section>
                         <section class="itemQuantity">
                             <button type="button">
@@ -427,17 +427,17 @@ $("body").on("click", "#tickets2", (e) => {
                             </button>
                         </section>
                     </section>`)
-    $("#hidePopupTix2").hide();
-    $(".hideAdded").toggle();
-});
-// End Add Tix 2
+        $("#hidePopupTix2").hide();
+        $(".hideAdded").toggle();
+    });
+    // End Add Tix 2
 
-$("body").on("click", ".closeAdded", (e) => {
-    $(".hideAdded").toggle();
-});
+    $("body").on("click", ".closeAdded", (e) => {
+        $(".hideAdded").toggle();
+    });
 
-// Cart Buttons
- $("body").on("click", ".clear-button", (e) => {
+    // Cart Buttons
+    $("body").on("click", ".clear-button", (e) => {
         $(".itemContainer").html("")
     })
 
@@ -542,7 +542,7 @@ $("body").on("click", ".closeAdded", (e) => {
         qty++;
         $(".hatQty").val(qty);;
     });
-    
+
     $("body").on("click", ".hatQtyRemove", (e) => {
         let qty = $(".hatQty").val();
         if (qty === 1) {
@@ -561,7 +561,7 @@ $("body").on("click", ".closeAdded", (e) => {
         qty++;
         $(".post1Qty").val(qty);;
     });
-    
+
     $("body").on("click", ".post1QtyRemove", (e) => {
         let qty = $(".post1Qty").val();
         if (qty === 1) {
@@ -580,7 +580,7 @@ $("body").on("click", ".closeAdded", (e) => {
         qty++;
         $(".post2Qty").val(qty);;
     });
-    
+
     $("body").on("click", ".post2QtyRemove", (e) => {
         let qty = $(".post2Qty").val();
         if (qty === 1) {
@@ -599,7 +599,7 @@ $("body").on("click", ".closeAdded", (e) => {
         qty++;
         $(".post3Qty").val(qty);;
     });
-    
+
     $("body").on("click", ".post3QtyRemove", (e) => {
         let qty = $(".post3Qty").val();
         if (qty === 1) {
@@ -618,7 +618,7 @@ $("body").on("click", ".closeAdded", (e) => {
         qty++;
         $(".cymQty").val(qty);;
     });
-    
+
     $("body").on("click", ".cymQtyRemove", (e) => {
         let qty = $(".cymQty").val();
         if (qty === 1) {
@@ -637,7 +637,7 @@ $("body").on("click", ".closeAdded", (e) => {
         qty++;
         $(".tix1Qty").val(qty);;
     });
-    
+
     $("body").on("click", ".tix1QtyRemove", (e) => {
         let qty = $(".tix1Qty").val();
         if (qty === 1) {
@@ -656,7 +656,7 @@ $("body").on("click", ".closeAdded", (e) => {
         qty++;
         $(".tix2Qty").val(qty);;
     });
-    
+
     $("body").on("click", ".tix2QtyRemove", (e) => {
         let qty = $(".tix2Qty").val();
         if (qty === 1) {
