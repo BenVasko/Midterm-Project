@@ -31,18 +31,25 @@
     <!--CD-->
     <section class="product-popup-cd" id="hidePopupCD">
         <section class="popup-header">
-            <h1>CD - "Blind"</h1>
-            <i class="material-icons">clear</i>
+            <h1 class="nameCD">CD - "Blind"</h1>
+            <button type="button">
+                <i class="material-icons" id="closeCD">clear</i>
+            </button>
         </section>
-        <section class="popup-image">
+        <section class="popup-image" id="CD">
             <img src="pictures/album-art.jpg">
         </section>
-        <p class="popup-price">$5.00</p>
+        <p class="popup-price" id="cdPrice">$5.00</p>
         <section class="adjust-quantity">
-            <i class="material-icons">remove</i>1
-            <i class="material-icons">add</i>
+            <button type="button">
+                <i class="material-icons">remove</i>
+            </button>
+            <input type="text" class="cdQty" value="1">
+            <button type="button">
+                <i class="material-icons">add</i>
+            </button>
         </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
+        <button class="popup-addToCart" type="button" id="compactDisc">ADD TO CART</button>
 
         <section class="description">
             <p>The highly acclaimed debut ep from Castle No Kings on CD. "Blind" tackles issues of society and losing onesself
@@ -61,18 +68,25 @@
     <!--Vinyl-->
     <section class="product-popup-vinyl" id="hidePopupVinyl">
         <section class="popup-header">
-            <h1>Vinyl - "Blind"</h1>
-            <i class="material-icons">clear</i>
+            <h1 class="nameVinyl">Vinyl - "Blind"</h1>
+            <button type="button">
+                <i class="material-icons" id="closeVinyl">clear</i>
+            </button>
         </section>
-        <section class="popup-image">
+        <section class="popup-image" id="vinyl">
             <img src="pictures/vinyl.png">
         </section>
-        <p class="popup-price">$10.00</p>
+        <p class="popup-price" id="vinylPrice">$10.00</p>
         <section class="adjust-quantity">
-            <i class="material-icons">remove</i>1
-            <i class="material-icons">add</i>
+            <button type="button">
+                <i class="material-icons">remove</i>
+            </button>
+            <input type="text" class="vinylQty" value="1">
+            <button type="button">
+                <i class="material-icons">add</i>
+            </button>
         </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
+        <button class="popup-addToCart" type="button" id="vinylRecord">ADD TO CART</button>
 
         <section class="description">
             <p>The highly acclaimed debut ep from Castle No Kings on vinyl. "Blind" tackles issues of society and losing onesself
@@ -91,18 +105,25 @@
     <!--shirt #1 (burgundy)-->
     <section class="product-popup-burgundy" id="hidePopupBurgundy">
         <section class="popup-header">
-            <h1>Shirt - Burgundy</h1>
-            <i class="material-icons">clear</i>
+            <h1 class="nameBurShirt">Shirt - Burgundy</h1>
+            <button type="button">
+                <i class="material-icons" id="closeBur">clear</i>
+            </button>
         </section>
-        <section class="popup-image">
+        <section class="popup-image" id="burgundyShirt">
             <img src="pictures/burgundy-shirt.jpg">
         </section>
-        <p class="popup-price">$30.00</p>
+        <p class="popup-price" id="burShirtPrice">$30.00</p>
         <section class="adjust-quantity">
-            <i class="material-icons">remove</i>1
-            <i class="material-icons">add</i>
+            <button type="button">
+                <i class="material-icons">remove</i>
+            </button>
+            <input type="text" class="burShirtQty" value="1">
+            <button type="button">
+                <i class="material-icons">add</i>
+            </button>
         </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
+        <button class="popup-addToCart" type="button" id="burShirt">ADD TO CART</button>
 
         <section class="description">
             <p>A long-sleeved burgundy shirt featuring a drawing theorizing how vision works by ancient greeks.</p>
@@ -112,18 +133,25 @@
     <!--shirt #2 (black)-->
     <section class="product-popup-black" id="hidePopupBlack">
         <section class="popup-header">
-            <h1>Shirt - Black</h1>
-            <button type="button"><i class="material-icons" id="close">clear</i></button>
+            <h1 class="nameBlkShirt">Shirt - Black</h1>
+            <button type="button">
+                <i class="material-icons" id="closeBlk">clear</i>
+            </button>
         </section>
         <section class="popup-image" id="blackShirt">
             <img src="pictures/black-shirt.jpg">
         </section>
-        <p class="popup-price">$20.00</p>
+        <p class="popup-price" id="blkShirtPrice">$20.00</p>
         <section class="adjust-quantity">
-            <i class="material-icons">remove</i>1
-            <i class="material-icons">add</i>
+            <button type="button">
+                <i class="material-icons">remove</i>
+            </button>
+            <input type="text" class="blkShirtQty" value="1">
+            <button type="button">
+                <i class="material-icons">add</i>
+            </button>
         </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
+        <button class="popup-addToCart" type="button" id="blkShirt">ADD TO CART</button>
 
         <section class="description">
             <p>A short-sleeved black shirt featuring a drawing theorizing how vision works by ancient greeks.</p>
@@ -133,18 +161,25 @@
     <!--shirt #3 (white)-->
     <section class="product-popup-white" id="hidePopupWhite">
         <section class="popup-header">
-            <h1>Shirt - White</h1>
-            <i class="material-icons">clear</i>
+            <h1 class="nameWhiteShirt">Shirt - White</h1>
+            <button type="button">
+                <i class="material-icons" id="closeWhite">clear</i>
+            </button>
         </section>
-        <section class="popup-image">
+        <section class="popup-image" id="whiteShirt">
             <img src="pictures/white-shirt.jpg">
         </section>
-        <p class="popup-price">$20.00</p>
+        <p class="popup-price" id="whiteShirtPrice">$20.00</p>
         <section class="adjust-quantity">
-            <i class="material-icons">remove</i>1
-            <i class="material-icons">add</i>
+            <button type="button">
+                <i class="material-icons">remove</i>
+            </button>
+            <input type="text" class="whiteShirtQty" value="1">
+            <button type="button">
+                <i class="material-icons">add</i>
+            </button>
         </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
+        <button class="popup-addToCart" type="button" id="whtShirt">ADD TO CART</button>
 
         <section class="description">
             <p>A short-sleeved white shirt featuring a lyric from one of Castle No Kings' up and coming songs.</p>
@@ -154,18 +189,25 @@
     <!--dad hat-->
     <section class="product-popup-hat" id="hidePopupHat">
         <section class="popup-header">
-            <h1>Hat - "Let my identity..."</h1>
-            <i class="material-icons">clear</i>
+            <h1 class="nameHat">Hat - "Let my identity..."</h1>
+            <button type="button">
+                <i class="material-icons" id="closeHat">clear</i>
+            </button>
         </section>
-        <section class="popup-image">
+        <section class="popup-image" id="hat">
             <img src="pictures/dad-hat.png">
         </section>
-        <p class="popup-price">$15.00</p>
+        <p class="popup-price" id="hatPrice">$15.00</p>
         <section class="adjust-quantity">
-            <i class="material-icons">remove</i>1
-            <i class="material-icons">add</i>
+            <button type="button">
+                <i class="material-icons">remove</i>
+            </button>
+            <input type="text" class="hatQty" value="1">
+            <button type="button">
+                <i class="material-icons">add</i>
+            </button>
         </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
+        <button class="popup-addToCart" type="button" id="dadHat">ADD TO CART</button>
 
         <section class="description">
             <p>A black "dad hat" styled hat featuring the "Blind" compass rose emblem.</p>
@@ -326,6 +368,7 @@
                             <button class="carousel-addToCart" type="button">ADD TO CART</button>
                         </section>
                     </div>
+
                     <div class="carousel-item">
                         <img class="d-block w-100" id="burgundyShirt" src="pictures/burgundy-shirt.jpg" alt="Second slide">
                         <section class="carouselbuy">
@@ -369,6 +412,7 @@
                     <span class="sr-only">Next</span>
                 </a>
             </section>
+
             <section id="musiccarousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -383,6 +427,7 @@
                         </section>
                     </div>
                     <div class="carousel-item">
+
                         <img class="d-block w-100" id="vinyl" src="pictures/vinyl.png" alt="Sixth Slide">
                         <section class="carouselbuy">
                             <p class="carousel-price">$10.00</p>
@@ -392,6 +437,8 @@
                             </section>
                             <button class="carousel-addToCart" type="button">ADD TO CART</button>
                         </section>
+
+
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#musiccarousel" role="button" data-slide="prev">
@@ -403,6 +450,7 @@
                     <span class="sr-only">Next</span>
                 </a>
             </section>
+
             <section id="collectiblescarousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -459,6 +507,7 @@
                     <span class="sr-only">Next</span>
                 </a>
             </section>
+
             <section id="ticketscarousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -473,6 +522,7 @@
                         </section>
                     </div>
                     <div class="carousel-item">
+
                         <img class="d-block w-100" id="julyShow" src="pictures/july21show.jpg" alt="Twelth Slide">
                         <section class="carouselbuy">
                             <p class="carousel-price">$8.00</p>
@@ -493,7 +543,9 @@
                     <span class="sr-only">Next</span>
                 </a>
             </section>
+
             </div>
+
         </div>
 
         <!-- <section class="carouselbuy">
@@ -515,19 +567,23 @@
         <section class="slideOutCart">
             <section class="cart-header">
                 <h1>CART</h1>
-                <button type="button" class="close"><i class="material-icons">clear</i></button>
+                <button type="button" class="close">
+                    <i class="material-icons">clear</i>
+                </button>
             </section>
-            <section class="itemsInCart"></section>
+            <section class="itemContainer">
+            <!-- Cart Items Inserted Here -->
+            </section>
             <section class="updateClear">
                 <button class="update-button burgundy" type="button">UPDATE</button>
                 <button class="clear-button burgundy" type="button">CLEAR</button>
             </section>
-            <button class="checkout-button yellow" type="button">CHECKOUT</button>
+            <a href="checkout.html"><button class="checkout-button yellow" type="button">CHECKOUT</button></a>
         </section>
     </section>
 
 
-  <!-- End Cart Code -->
+    <!-- End Cart Code -->
 
 
     </section>

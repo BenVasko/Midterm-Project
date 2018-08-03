@@ -234,6 +234,7 @@ display: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
     margin: 2% 2%;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -256,6 +257,12 @@ display: none;
     width: 45%;
     background: #6f2327;
     color: #ebeae6;
+}
+.items {
+display: flex;
+justify-content: space-around;
+font-size: 20px;
+/* flex-direction: column; */
 }
 
 /*CHECKOUT PAGE*/
