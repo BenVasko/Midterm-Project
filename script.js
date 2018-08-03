@@ -440,4 +440,233 @@ $("body").on("click", ".closeAdded", (e) => {
  $("body").on("click", ".clear-button", (e) => {
         $(".itemContainer").html("")
     })
+
+    //CD QTY BTNS
+    $("body").on("click", ".cdQtyAdd", (e) => {
+        let qty = $(".cdQty").val();
+        qty++;
+        $(".cdQty").val(qty);;
+    });
+
+    $("body").on("click", ".cdQtyRemove", (e) => {
+        let qty = $(".cdQty").val();
+        if (qty === 1) {
+            $(".cdQtyRemove").css("cursor", "not-allowed");
+        }
+        if (qty <= 1) {
+        } else {
+            qty--;
+            $(".cdQty").val(qty);
+        }
+    });
+
+    //VINYL QTY BTNS
+    $("body").on("click", ".vinylQtyAdd", (e) => {
+        let qty = $(".vinylQty").val();
+        qty++;
+        $(".vinylQty").val(qty);;
+    });
+
+    $("body").on("click", ".vinylQtyRemove", (e) => {
+        let qty = $(".vinylQty").val();
+        if (qty === 1) {
+            $(".vinylQtyRemove").css("cursor", "not-allowed");
+        }
+        if (qty <= 1) {
+        } else {
+            qty--;
+            $(".vinylQty").val(qty);
+        }
+    });
+
+    //BLACK SHIRT QTY BTNS
+    $("body").on("click", ".blkShirtQtyAdd", (e) => {
+        let qty = $(".blkShirtQty").val();
+        qty++;
+        $(".blkShirtQty").val(qty);;
+    });
+
+    $("body").on("click", ".blkShirtQtyRemove", (e) => {
+        let qty = $(".blkShirtQty").val();
+        if (qty === 1) {
+            $(".blkShirtQtyRemove").css("cursor", "not-allowed");
+        }
+        if (qty <= 1) {
+        } else {
+            qty--;
+            $(".blkShirtQty").val(qty);
+        }
+    });
+
+    //BURGUNDY SHIRT QTY BTNS
+    $("body").on("click", ".burShirtQtyAdd", (e) => {
+        let qty = $(".burShirtQty").val();
+        qty++;
+        $(".burShirtQty").val(qty);;
+    });
+
+    $("body").on("click", ".burShirtQtyRemove", (e) => {
+        let qty = $(".burShirtQty").val();
+        if (qty === 1) {
+            $(".burShirtQtyRemove").css("cursor", "not-allowed");
+        }
+        if (qty <= 1) {
+        } else {
+            qty--;
+            $(".burShirtQty").val(qty);
+        }
+    });
+
+    //WHITE SHIRT QTY BTNS
+    $("body").on("click", ".whiteShirtQtyAdd", (e) => {
+        let qty = $(".whiteShirtQty").val();
+        qty++;
+        $(".whiteShirtQty").val(qty);;
+    });
+
+    $("body").on("click", ".whiteShirtQtyRemove", (e) => {
+        let qty = $(".whiteShirtQty").val();
+        if (qty === 1) {
+            $(".whiteShirtQtyRemove").css("cursor", "not-allowed");
+        }
+        if (qty <= 1) {
+        } else {
+            qty--;
+            $(".whiteShirtQty").val(qty);
+        }
+    });
+
+    //HAT QTY BTNS
+    $("body").on("click", ".hatQtyAdd", (e) => {
+        let qty = $(".hatQty").val();
+        qty++;
+        $(".hatQty").val(qty);;
+    });
+    
+    $("body").on("click", ".hatQtyRemove", (e) => {
+        let qty = $(".hatQty").val();
+        if (qty === 1) {
+            $(".hatQtyRemove").css("cursor", "not-allowed");
+        }
+        if (qty <= 1) {
+        } else {
+            qty--;
+            $(".hatQty").val(qty);
+        }
+    });
+
+    //POSTER 1 QTY BTNS
+    $("body").on("click", ".post1ShirtQtyAdd", (e) => {
+        let qty = $(".post1Qty").val();
+        qty++;
+        $(".post1Qty").val(qty);;
+    });
+    
+    $("body").on("click", ".post1QtyRemove", (e) => {
+        let qty = $(".post1Qty").val();
+        if (qty === 1) {
+            $(".post1QtyRemove").css("cursor", "not-allowed");
+        }
+        if (qty <= 1) {
+        } else {
+            qty--;
+            $(".post1Qty").val(qty);
+        }
+    });
+
+    //POSTER 2 QTY BTNS
+    $("body").on("click", ".post2QtyAdd", (e) => {
+        let qty = $(".post2Qty").val();
+        qty++;
+        $(".post2Qty").val(qty);;
+    });
+    
+    $("body").on("click", ".post2QtyRemove", (e) => {
+        let qty = $(".post2Qty").val();
+        if (qty === 1) {
+            $(".post2QtyRemove").css("cursor", "not-allowed");
+        }
+        if (qty <= 1) {
+        } else {
+            qty--;
+            $(".post2Qty").val(qty);
+        }
+    });
+
+    //POSTER 3 QTY BTNS
+    $("body").on("click", ".post3QtyAdd", (e) => {
+        let qty = $(".post3Qty").val();
+        qty++;
+        $(".post3Qty").val(qty);;
+    });
+    
+    $("body").on("click", ".post3QtyRemove", (e) => {
+        let qty = $(".post3Qty").val();
+        if (qty === 1) {
+            $(".post3QtyRemove").css("cursor", "not-allowed");
+        }
+        if (qty <= 1) {
+        } else {
+            qty--;
+            $(".post3Qty").val(qty);
+        }
+    });
+
+    //CYMBAL QTY BTNS
+    $("body").on("click", ".cymQtyAdd", (e) => {
+        let qty = $(".cymQty").val();
+        qty++;
+        $(".cymQty").val(qty);;
+    });
+    
+    $("body").on("click", ".cymQtyRemove", (e) => {
+        let qty = $(".cymQty").val();
+        if (qty === 1) {
+            $(".cymQtyRemove").css("cursor", "not-allowed");
+        }
+        if (qty <= 1) {
+        } else {
+            qty--;
+            $(".cymQty").val(qty);
+        }
+    });
+
+    //TIX 1 QTY BTNS
+    $("body").on("click", ".tix1QtyAdd", (e) => {
+        let qty = $(".tix1Qty").val();
+        qty++;
+        $(".tix1Qty").val(qty);;
+    });
+    
+    $("body").on("click", ".tix1QtyRemove", (e) => {
+        let qty = $(".tix1Qty").val();
+        if (qty === 1) {
+            $(".tix1QtyRemove").css("cursor", "not-allowed");
+        }
+        if (qty <= 1) {
+        } else {
+            qty--;
+            $(".tix1Qty").val(qty);
+        }
+    });
+
+    //TIX 2 QTY BTNS
+    $("body").on("click", ".tix2QtyAdd", (e) => {
+        let qty = $(".tix2Qty").val();
+        qty++;
+        $(".tix2Qty").val(qty);;
+    });
+    
+    $("body").on("click", ".tix2QtyRemove", (e) => {
+        let qty = $(".tix2Qty").val();
+        if (qty === 1) {
+            $(".tix2QtyRemove").css("cursor", "not-allowed");
+        }
+        if (qty <= 1) {
+        } else {
+            qty--;
+            $(".tix2Qty").val(qty);
+        }
+    });
+
 });
