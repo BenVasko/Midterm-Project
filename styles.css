@@ -207,6 +207,9 @@ header a:hover, .cart:hover {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+.carousel-inner{
+    overflow: visible;
+    }
 /* SLIDE OUT CART*/
 
 #hideCart {
