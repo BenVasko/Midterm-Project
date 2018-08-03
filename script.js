@@ -596,5 +596,10 @@ $("body").on("click", ".closeAdded", (e) => {
             $(".tix2Qty").val(qty);
         }
     });
+    $("body").on("click", "#checkoutbtn", (e) => {
+        $("#mainpagehide").hide();
+        $(".hidecheckout").removeClass().addClass("checkout-page");
+        
+    });
 
 });
