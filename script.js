@@ -160,14 +160,8 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
         <section class="itemName">${$(".nameVinyl").text()}</section>
         <section class="itemQuantity">
-            <button type="button">
-                <i class="material-icons">remove</i>
-            </button>
-            <input type="text" value="${$(".vinylQty").val()}">
-                <button type="button">
-                    <i class="material-icons">add</i>
-                </button>
-</section>
+            <input type="number" value="${$(".vinylQty").val()}">
+        </section>
             <section class="itemPrice"> @${($("#vinylPrice").text())} each</section>
             <button type="button">
                 <i class="material-icons">clear</i>
@@ -183,14 +177,8 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
         <section class="itemName">${$(".nameCD").text()}</section>
         <section class="itemQuantity">
-            <button type="button">
-                <i class="material-icons">remove</i>
-            </button>
-            <input type="text" value="${$(".cdQty").val()}">
-                <button type="button">
-                    <i class="material-icons">add</i>
-                </button>
-</section>
+            <input type="number" value="${$(".cdQty").val()}">   
+        </section>
             <section class="itemPrice"> @${($("#cdPrice").text())} each</section>
             <button type="button">
                 <i class="material-icons">clear</i>
@@ -206,14 +194,8 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
         <section class="itemName">${$(".nameBurShirt").text()}</section>
         <section class="itemQuantity">
-            <button type="button">
-                <i class="material-icons">remove</i>
-            </button>
-            <input type="text" value="${$(".burShirtQty").val()}">
-                <button type="button">
-                    <i class="material-icons">add</i>
-                </button>
-</section>
+            <input type="number" value="${$(".burShirtQty").val()}">
+        </section>
             <section class="itemPrice"> @${($("#burShirtPrice").text())} each</section>
             <button type="button">
                 <i class="material-icons">clear</i>
@@ -229,14 +211,8 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
             <section class="itemName">${$(".nameBlkShirt").text()}</section>
             <section class="itemQuantity">
-                <button type="button">
-                    <i class="material-icons">remove</i>
-                </button>
-                <input type="text" value="${$(".blkShirtQty").val()}">
-                    <button type="button">
-                        <i class="material-icons">add</i>
-                    </button>
-    </section>
+                <input type="number" value="${$(".blkShirtQty").val()}">
+            </section>
                 <section class="itemPrice"> @${($("#blkShirtPrice").text())} each</section>
                 <button type="button">
                     <i class="material-icons">clear</i>
@@ -252,14 +228,8 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
             <section class="itemName">${$(".nameWhiteShirt").text()}</section>
             <section class="itemQuantity">
-                <button type="button">
-                    <i class="material-icons">remove</i>
-                </button>
-                <input type="text" value="${$(".whiteShirtQty").val()}">
-                    <button type="button">
-                        <i class="material-icons">add</i>
-                    </button>
-    </section>
+                <input type="number" value="${$(".whiteShirtQty").val()}">
+             </section>
                 <section class="itemPrice"> @${($("#whiteShirtPrice").text())} each</section>
                 <button type="button">
                     <i class="material-icons">clear</i>
@@ -275,14 +245,8 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
             <section class="itemName">${$(".nameHat").text()}</section>
             <section class="itemQuantity">
-                <button type="button">
-                    <i class="material-icons">remove</i>
-                </button>
-                <input type="text" value="${$(".hatQty").val()}">
-                    <button type="button">
-                        <i class="material-icons">add</i>
-                    </button>
-    </section>
+                <input type="number" value="${$(".hatQty").val()}">
+            </section>
                 <section class="itemPrice"> @${($("#hatPrice").text())} each</section>
                 <button type="button">
                     <i class="material-icons">clear</i>
@@ -298,14 +262,8 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
                 <section class="itemName">${$(".nameCymbal").text()}</section>
                 <section class="itemQuantity">
-                    <button type="button">
-                        <i class="material-icons">remove</i>
-                    </button>
-                    <input type="text" value="${$(".cymQty").val()}">
-                        <button type="button">
-                            <i class="material-icons">add</i>
-                        </button>
-        </section>
+                    <input type="number" value="${$(".cymQty").val()}">
+                </section>
                     <section class="itemPrice"> @${($("#cymbalPrice").text())} each</section>
                     <button type="button">
                         <i class="material-icons">clear</i>
@@ -321,14 +279,8 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
                 <section class="itemName">${$(".nameP1").text()}</section>
                 <section class="itemQuantity">
-                    <button type="button">
-                        <i class="material-icons">remove</i>
-                    </button>
-                    <input type="text" value="${$(".post1Qty").val()}">
-                        <button type="button">
-                            <i class="material-icons">add</i>
-                        </button>
-        </section>
+                    <input type="number" value="${$(".post1Qty").val()}">
+                </section>
                     <section class="itemPrice"> @${($("#p1Price").text())} each</section>
                     <button type="button">
                         <i class="material-icons">clear</i>
@@ -344,14 +296,8 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
                 <section class="itemName">${$(".nameP2").text()}</section>
                 <section class="itemQuantity">
-                    <button type="button">
-                        <i class="material-icons">remove</i>
-                    </button>
-                    <input type="text" value="${$(".post2Qty").val()}">
-                        <button type="button">
-                            <i class="material-icons">add</i>
-                        </button>
-        </section>
+                    <input type="number" value="${$(".post2Qty").val()}">
+                </section>
                     <section class="itemPrice"> @${($("#p2Price").text())} each</section>
                     <button type="button">
                         <i class="material-icons">clear</i>
@@ -367,14 +313,8 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
                         <section class="itemName">${$(".nameP3").text()}</section>
                         <section class="itemQuantity">
-                            <button type="button">
-                                <i class="material-icons">remove</i>
-                            </button>
-                            <input type="text" value="${$(".post3Qty").val()}">
-                                <button type="button">
-                                    <i class="material-icons">add</i>
-                                </button>
-                </section>
+                            <input type="number" value="${$(".post3Qty").val()}">
+                        </section>
                             <section class="itemPrice"> @${($("#p3Price").text())} each</section>
                             <button type="button">
                                 <i class="material-icons">clear</i>
@@ -390,14 +330,8 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
                             <section class="itemName">${$(".nameTix1").text()}</section>
                             <section class="itemQuantity">
-                                <button type="button">
-                                    <i class="material-icons">remove</i>
-                                </button>
-                                <input type="text" value="${$(".tix1Qty").val()}">
-                                    <button type="button">
-                                        <i class="material-icons">add</i>
-                                    </button>
-                    </section>
+                                <input type="number" value="${$(".tix1Qty").val()}">
+                            </section>
                                 <section class="itemPrice"> @${($("#tix1Price").text())} each</section>
                                 <button type="button">
                                     <i class="material-icons">clear</i>
@@ -413,14 +347,8 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
                         <section class="itemName">${$(".nameTix2").text()}</section>
                         <section class="itemQuantity">
-                            <button type="button">
-                                <i class="material-icons">remove</i>
-                            </button>
-                            <input type="text" value="${$(".tix2Qty").val()}">
-                                <button type="button">
-                                    <i class="material-icons">add</i>
-                                </button>
-                </section>
+                            <input type="number" value="${$(".tix2Qty").val()}">
+                        </section>
                             <section class="itemPrice"> @${($("#tix2Price").text())} each</section>
                             <button type="button">
                                 <i class="material-icons">clear</i>
