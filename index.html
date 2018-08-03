@@ -27,6 +27,19 @@
     <section class="bandpicbox">
         <img id="bandpic" src="pictures/band-promo-pic.jpg" alt="Castle No Kings Picture">
     </section>
+<!-- Added Popup -->
+<section class="hideAdded">
+    <section class="added">
+        <section class="added-header">
+            <h1>Item Added To Cart!</h1>
+            <button type="button">
+                <i class="material-icons closeAdded">clear</i>
+            </button>
+        </section>
+        <p class="addedP">Item has been added to your cart. Please proceed to checkout to complete your purchase!</p>
+    </section>
+</section>
+<!-- End Added Popup -->
     <!-- Start Popup Section -->
     <!--CD-->
     <section class="product-popup-cd" id="hidePopupCD">
@@ -110,7 +123,7 @@
                 <i class="material-icons" id="closeBur">clear</i>
             </button>
         </section>
-        <section class="popup-image" id="burgundyShirt">
+        <section class="popup-image">
             <img src="pictures/burgundy-shirt.jpg">
         </section>
         <p class="popup-price" id="burShirtPrice">$30.00</p>
@@ -138,7 +151,7 @@
                 <i class="material-icons" id="closeBlk">clear</i>
             </button>
         </section>
-        <section class="popup-image" id="blackShirt">
+        <section class="popup-image">
             <img src="pictures/black-shirt.jpg">
         </section>
         <p class="popup-price" id="blkShirtPrice">$20.00</p>
@@ -166,7 +179,7 @@
                 <i class="material-icons" id="closeWhite">clear</i>
             </button>
         </section>
-        <section class="popup-image" id="whiteShirt">
+        <section class="popup-image">
             <img src="pictures/white-shirt.jpg">
         </section>
         <p class="popup-price" id="whiteShirtPrice">$20.00</p>
@@ -194,7 +207,7 @@
                 <i class="material-icons" id="closeHat">clear</i>
             </button>
         </section>
-        <section class="popup-image" id="hat">
+        <section class="popup-image">
             <img src="pictures/dad-hat.png">
         </section>
         <p class="popup-price" id="hatPrice">$15.00</p>
@@ -217,18 +230,25 @@
     <!--poster #1-->
     <section class="product-popup-p1" id="hidePopupP1">
         <section class="popup-header">
-            <h1>Poster - Compass Rose</h1>
-            <i class="material-icons">clear</i>
+            <h1 class="nameP1">Poster - Compass Rose</h1>
+            <button type="button">
+                <i class="material-icons" id="closeP1">clear</i>
+            </button>
         </section>
         <section class="popup-image">
             <img src="pictures/poster-1.jpg">
         </section>
-        <p class="popup-price">$5.00</p>
+        <p class="popup-price" id="p1Price">$5.00</p>
         <section class="adjust-quantity">
-            <i class="material-icons">remove</i>1
-            <i class="material-icons">add</i>
+            <button type="button">
+                <i class="material-icons">remove</i>
+            </button>
+            <input type="text" class="p1Qty" value="1">
+            <button type="button">
+                <i class="material-icons">add</i>
+            </button>
         </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
+        <button class="popup-addToCart" type="button" id="p1">ADD TO CART</button>
 
         <section class="description">
             <p>A poster featuring the "Blind" compass rose emblem.</p>
@@ -238,18 +258,25 @@
     <!--poster #2-->
     <section class="product-popup-p2" id="hidePopupP2">
         <section class="popup-header">
-            <h1>Poster - "Blind" Promo</h1>
-            <i class="material-icons">clear</i>
+            <h1 class="nameP2">Poster - "Blind" Promo</h1>
+            <button type="button">
+                <i class="material-icons" id="closeP2">clear</i>
+            </button>
         </section>
         <section class="popup-image">
             <img src="pictures/poster-2.jpg">
         </section>
-        <p class="popup-price">$5.00</p>
+        <p class="popup-price" id="p2Price">$5.00</p>
         <section class="adjust-quantity">
-            <i class="material-icons">remove</i>1
-            <i class="material-icons">add</i>
+            <button type="button">
+                <i class="material-icons">remove</i>
+            </button>
+            <input type="text" class="p2Qty" value="1">
+            <button type="button">
+                <i class="material-icons">add</i>
+            </button>
         </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
+        <button class="popup-addToCart" type="button" id="p2">ADD TO CART</button>
 
         <section class="description">
             <p>A poster featuring the promo photo from the ep, "Blind".</p>
@@ -259,18 +286,25 @@
     <!--poster #3-->
     <section class="product-popup-p3" id="hidePopupP3">
         <section class="popup-header">
-            <h1>Poster - Release Tour Promo</h1>
-            <i class="material-icons">clear</i>
+            <h1 class="nameP3">Poster - Release Tour Promo</h1>
+            <button type="button">
+                <i class="material-icons" id="closeP3">clear</i>
+            </button>
         </section>
         <section class="popup-image">
             <img src="pictures/poster-3.jpg">
         </section>
-        <p class="popup-price">$5.00</p>
+        <p class="popup-price" id="p3Price">$5.00</p>
         <section class="adjust-quantity">
-            <i class="material-icons">remove</i>1
-            <i class="material-icons">add</i>
+            <button type="button">
+                <i class="material-icons">remove</i>
+            </button>
+            <input type="text" class="p3Qty" value="1">
+            <button type="button">
+                <i class="material-icons">add</i>
+            </button>
         </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
+        <button class="popup-addToCart" type="button" id="p3">ADD TO CART</button>
 
         <section class="description">
             <p>A poster featuring the promo photo from the release tour of "Blind".</p>
@@ -280,18 +314,25 @@
     <!--cymbal-->
     <section class="product-popup-cymbal" id="hidePopupCymbal">
         <section class="popup-header">
-            <h1>"SD" Cymbals</h1>
-            <i class="material-icons">clear</i>
+            <h1 class="nameCymbal">"SD" Cymbals</h1>
+            <button type="button">
+                <i class="material-icons" id="closeCymbal">clear</i>
+            </button>
         </section>
         <section class="popup-image">
             <img src="pictures/music-video-cymbal.jpg">
         </section>
-        <p class="popup-price">$30.00</p>
+        <p class="popup-price" id="cymbalPrice">$30.00</p>
         <section class="adjust-quantity">
-            <i class="material-icons">remove</i>1
-            <i class="material-icons">add</i>
+            <button type="button">
+                <i class="material-icons">remove</i>
+            </button>
+            <input type="text" class="cymbalQty" value="1">
+            <button type="button">
+                <i class="material-icons">add</i>
+            </button>
         </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
+        <button class="popup-addToCart" type="button" id="usedCymbal">ADD TO CART</button>
 
         <section class="description">
             <p>Purchase one of the cymbals used in the "Skin Deep" music video! (ONLY 4 AVAILABLE)</p>
@@ -301,41 +342,54 @@
     <!--Tix 1-->
     <section class="product-popup-tix1" id="hidePopupTix1">
         <section class="popup-header">
-            <h1>Tix - July 21st</h1>
-            <i class="material-icons">clear</i>
+            <h1 class="nameTix1">Tix - July 21st</h1>
+            <button type="button">
+                <i class="material-icons" id="closeTix1">clear</i>
+            </button>
         </section>
         <section class="popup-image">
             <img src="pictures/july21show.jpg">
         </section>
-        <p class="popup-price">$8.00</p>
+        <p class="popup-price" id="tix1Price">$8.00</p>
         <section class="adjust-quantity">
-            <i class="material-icons">remove</i>
-            1
-            <i class="material-icons">add</i>
+            <button type="button">
+                <i class="material-icons">remove</i>
+            </button>
+            <input type="text" class="tix1Qty" value="1">
+            <button type="button">
+                <i class="material-icons">add</i>
+            </button>
         </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
+        <button class="popup-addToCart" type="button" id="tickets1">ADD TO CART</button>
 
         <section class="description">
             <p>Purchase a ticket to Castle No Kings' upcoming battle of the bands show with Rogue, Homegrownups, The Harbor
                 Divide, and Ice Cream Militia at the Civic in Toledo, OH.</p>
         </section>
     </section>
-    <!-- end popup tix 1 -->
+    <!-- End Popup tix 1 -->
     <!--Tix 2-->
     <section class="product-popup-tix2" id="hidePopupTix2">
         <section class="popup-header">
-            <h1>Tix - Aug 18th</h1>
-            <i class="material-icons">clear</i>
+            <h1 class="nameTix2">Tix - Aug 18th</h1>
+            <button type="button">
+                <i class="material-icons" id="closeTix2">clear</i>
+            </button>
         </section>
         <section class="popup-image">
             <img src="pictures/aug18show.jpg">
         </section>
-        <p class="popup-price">$5.00</p>
+        <p class="popup-price" id="tix2Price">$5.00</p>
         <section class="adjust-quantity">
-            <i class="material-icons">remove</i>1
-            <i class="material-icons">add</i>
+            <button type="button">
+                <i class="material-icons">remove</i>
+            </button>
+            <input type="text" class="tix2Qty" value="1">
+            <button type="button">
+                <i class="material-icons">add</i>
+            </button>
         </section>
-        <button class="popup-addToCart" type="button">ADD TO CART</button>
+        <button class="popup-addToCart" type="button" id="tickets2">ADD TO CART</button>
 
         <section class="description">
             <p>Purchase a ticket to Castle No Kings' upcoming show with Wild Nights, Homegrownups, Rogue, Into the Wild, and
@@ -365,7 +419,7 @@
                                 <i class="material-icons">remove</i>1
                                 <i class="material-icons">add</i>
                             </section>
-                            <button class="carousel-addToCart" type="button">ADD TO CART</button>
+                            <button class="carousel-addToCart" type="button" id="blkShirt">ADD TO CART</button>
                         </section>
                     </div>
 
@@ -377,7 +431,7 @@
                                 <i class="material-icons">remove</i>1
                                 <i class="material-icons">add</i>
                             </section>
-                            <button class="carousel-addToCart" type="button">ADD TO CART</button>
+                            <button class="carousel-addToCart" type="button" id="burShirt">ADD TO CART</button>
                         </section>
                     </div>
                     <div class="carousel-item">
@@ -388,7 +442,7 @@
                                 <i class="material-icons">remove</i>1
                                 <i class="material-icons">add</i>
                             </section>
-                            <button class="carousel-addToCart" type="button">ADD TO CART</button>
+                            <button class="carousel-addToCart" type="button" id="dadHat">ADD TO CART</button>
                         </section>
                     </div>
                     <div class="carousel-item">
@@ -399,7 +453,7 @@
                                 <i class="material-icons">remove</i>1
                                 <i class="material-icons">add</i>
                             </section>
-                            <button class="carousel-addToCart" type="button">ADD TO CART</button>
+                            <button class="carousel-addToCart" type="button" id="whtShirt">ADD TO CART</button>
                         </section>
                     </div>
                 </div>
@@ -423,7 +477,7 @@
                                 <i class="material-icons">remove</i>1
                                 <i class="material-icons">add</i>
                             </section>
-                            <button class="carousel-addToCart" type="button">ADD TO CART</button>
+                            <button class="carousel-addToCart" type="button" id="compactDisc">ADD TO CART</button>
                         </section>
                     </div>
                     <div class="carousel-item">
@@ -435,7 +489,7 @@
                                 <i class="material-icons">remove</i>1
                                 <i class="material-icons">add</i>
                             </section>
-                            <button class="carousel-addToCart" type="button">ADD TO CART</button>
+                            <button class="carousel-addToCart" type="button" id="vinylRecord">ADD TO CART</button>
                         </section>
 
 
@@ -461,7 +515,7 @@
                                 <i class="material-icons">remove</i>1
                                 <i class="material-icons">add</i>
                             </section>
-                            <button class="carousel-addToCart" type="button">ADD TO CART</button>
+                            <button class="carousel-addToCart" type="button" id="usedCymbal">ADD TO CART</button>
                         </section>
                     </div>
                     <div class="carousel-item">
@@ -472,7 +526,7 @@
                                 <i class="material-icons">remove</i>1
                                 <i class="material-icons">add</i>
                             </section>
-                            <button class="carousel-addToCart" type="button">ADD TO CART</button>
+                            <button class="carousel-addToCart" type="button" id="p1">ADD TO CART</button>
                         </section>
                     </div>
                     <div class="carousel-item">
@@ -483,7 +537,7 @@
                                 <i class="material-icons">remove</i>1
                                 <i class="material-icons">add</i>
                             </section>
-                            <button class="carousel-addToCart" type="button">ADD TO CART</button>
+                            <button class="carousel-addToCart" type="button" id="p2">ADD TO CART</button>
                         </section>
                     </div>
                     <div class="carousel-item">
@@ -494,7 +548,7 @@
                                 <i class="material-icons">remove</i>1
                                 <i class="material-icons">add</i>
                             </section>
-                            <button class="carousel-addToCart" type="button">ADD TO CART</button>
+                            <button class="carousel-addToCart" type="button" id="p3">ADD TO CART</button>
                         </section>
                     </div>
                 </div>
@@ -518,7 +572,7 @@
                                 <i class="material-icons">remove</i>1
                                 <i class="material-icons">add</i>
                             </section>
-                            <button class="carousel-addToCart" type="button">ADD TO CART</button>
+                            <button class="carousel-addToCart" type="button" id="tickets2">ADD TO CART</button>
                         </section>
                     </div>
                     <div class="carousel-item">
@@ -530,7 +584,7 @@
                                 <i class="material-icons">remove</i>1
                                 <i class="material-icons">add</i>
                             </section>
-                            <button class="carousel-addToCart" type="button">ADD TO CART</button>
+                            <button class="carousel-addToCart" type="button" id="tickets1">ADD TO CART</button>
                         </section>
                     </div>
                 </div>
@@ -543,9 +597,7 @@
                     <span class="sr-only">Next</span>
                 </a>
             </section>
-
-            </div>
-
+        </div>
         </div>
 
         <!-- <section class="carouselbuy">
@@ -558,32 +610,34 @@
         </section>
         </div>
     </section> -->
-    <!-- End Carousel Section -->
+        <!-- End Carousel Section -->
 
-    <!--CODE FOR SLIDE OUT CART-->
+        <!--CODE FOR SLIDE OUT CART-->
 
-    <section class="slideOutCartParent" id="hideCart">
+        <section class="slideOutCartParent" id="hideCart">
 
-        <section class="slideOutCart">
-            <section class="cart-header">
-                <h1>CART</h1>
-                <button type="button" class="close">
-                    <i class="material-icons">clear</i>
-                </button>
+            <section class="slideOutCart">
+                <section class="cart-header">
+                    <h1>CART</h1>
+                    <button type="button" class="close">
+                        <i class="material-icons">clear</i>
+                    </button>
+                </section>
+                <section class="itemContainer">
+                    <!-- Cart Items Inserted Here -->
+                </section>
+                <section class="updateClear">
+                    <button class="update-button burgundy" type="button">UPDATE</button>
+                    <button class="clear-button burgundy" type="button">CLEAR</button>
+                </section>
+                <a href="checkout.html">
+                    <button class="checkout-button yellow" type="button">CHECKOUT</button>
+                </a>
             </section>
-            <section class="itemContainer">
-            <!-- Cart Items Inserted Here -->
-            </section>
-            <section class="updateClear">
-                <button class="update-button burgundy" type="button">UPDATE</button>
-                <button class="clear-button burgundy" type="button">CLEAR</button>
-            </section>
-            <a href="checkout.html"><button class="checkout-button yellow" type="button">CHECKOUT</button></a>
         </section>
-    </section>
 
 
-    <!-- End Cart Code -->
+        <!-- End Cart Code -->
 
 
     </section>

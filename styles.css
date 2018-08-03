@@ -6,6 +6,21 @@
 body {
     background-color: #000;
 }
+.hideAdded{
+    display: none;
+}
+.added{
+    display: flex;
+    justify-content: center;
+    background-color: #fffdf6;
+    width: 50%;
+    flex-direction: column;
+    margin-left: 25%;
+}
+.addedP {
+    display: flex;
+    text-align: center;
+}
 header {
     display: flex;
     background-color: #6f2327;
@@ -119,7 +134,7 @@ header a:hover, .cart:hover {
     width: 90%;
     text-align: center;
 }
-.popup-header {
+.popup-header, .added-header {
     display: flex;
     justify-content: space-between;
     height: 5%;
