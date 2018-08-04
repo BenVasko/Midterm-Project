@@ -1,6 +1,81 @@
 " use strict";
 $(document).ready(() => {
-    let total = 0;
+    let cdTotal = 0;
+    let vinylTotal = 0;
+    let burShirtTotal = 0;
+    let blkShirtTotal = 0;
+    let whiteShirtTotal = 0;
+    let post1Total = 0;
+    let post2Total = 0;
+    let post3Total = 0;
+    let cymTotal = 0;
+    let hatTotal = 0;
+    let tix1Total = 0;
+    let tix2Total = 0;
+
+    let total = () => {
+        $(".total").text(null);
+        $(".total").append(`$${cdTotal + vinylTotal + burShirtTotal + blkShirtTotal + whiteShirtTotal + post1Total + post2Total + post3Total + cymTotal + hatTotal + tix1Total + tix2Total}`)
+    };
+
+    let update = () => {
+        if (vinylTotal > 0) {
+            vinylTotal = $(".vinylQtyCart").val() * $("#vinylPrice").val();
+        }
+        if (cdTotal > 0) {
+            cdTotal = $(".cdQtyCart").val() * $("#cdPrice").val();
+        }
+        if (burShirtTotal > 0) {
+            burShirtTotal = $(".burShirtQtyCart").val() * $("#burShirtPrice").val();
+        }
+        if (blkShirtTotal > 0) {
+            blkShirtTotal = $(".blkShirtQtyCart").val() * $("#blkShirtPrice").val();
+        }
+        if (whiteShirtTotal > 0) {
+            whiteShirtTotal = $(".whiteShirtQtyCart").val() * $("#whiteShirtPrice").val();
+        }
+        if (post1Total > 0) {
+            post1Total = $(".post1QtyCart").val() * $("#p1Price").val();
+        }
+        if (post2Total > 0) {
+            post2Total = $(".post2QtyCart").val() * $("#p2Price").val();
+        }
+        if (post3Total > 0) {
+            post3Total = $(".post3QtyCart").val() * $("#p3Price").val();
+        }
+        if (cymTotal > 0) {
+            cymTotal = $(".cymQtyCart").val() * $("#cymbalPrice").val();
+        }
+        if (hatTotal > 0) {
+            hatTotal = $(".hatQtyCart").val() * $("#hatPrice").val();
+        }
+        if (tix1Total > 0) {
+            tix1Total = $(".tix1QtyCart").val() * $("#tix1Price").val();
+        }
+        if (tix2Total > 0) {
+            tix2Total = $(".tix2QtyCart").val() * $("#tix2Price").val();
+        }
+        
+        total();
+    }
+
+    let clear = () => {
+    cdTotal = 0;
+    vinylTotal = 0;
+    burShirtTotal = 0;
+    blkShirtTotal = 0;
+    whiteShirtTotal = 0;
+    post1Total = 0;
+    post2Total = 0;
+    post3Total = 0;
+    cymTotal = 0;
+    hatTotal = 0;
+    tix1Total = 0;
+    tix2Total = 0;
+    }
+
+
+    total();
     $("#apparelcarousel").show();
     $("#musiccarousel").hide();
     $("#collectiblescarousel").hide();
@@ -160,14 +235,16 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
         <section class="itemName">${$(".nameVinyl").text()}</section>
         <section class="itemQuantity">
-            <input type="number" value="${$(".vinylQty").val()}">
+            <input type="number" class="vinylQtyCart" value="${$(".vinylQty").val()}">
         </section>
-            <section class="itemPrice"> @${($("#vinylPrice").text())} each</section>
+            <section class="itemPrice"> @ $${($("#vinylPrice").val())} each</section>
             <button type="button">
                 <i class="material-icons">clear</i>
             </button>
         </section>
-    </section>`)
+    </section>`);
+        vinylTotal += $(".vinylQty").val() * $("#vinylPrice").val();
+        total();
         $("#hidePopupVinyl").hide();
         $(".hideAdded").toggle();
     });
@@ -177,14 +254,16 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
         <section class="itemName">${$(".nameCD").text()}</section>
         <section class="itemQuantity">
-            <input type="number" value="${$(".cdQty").val()}">   
+            <input type="number" class="cdQtyCart" value="${$(".cdQty").val()}">   
         </section>
-            <section class="itemPrice"> @${($("#cdPrice").text())} each</section>
+            <section class="itemPrice"> @ $${($("#cdPrice").val())} each</section>
             <button type="button">
                 <i class="material-icons">clear</i>
             </button>
         </section>
-    </section>`)
+    </section>`);
+        cdTotal += $(".cdQty").val() * $("#cdPrice").val();
+        total();
         $("#hidePopupCD").hide();
         $(".hideAdded").toggle();
     });
@@ -194,14 +273,16 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
         <section class="itemName">${$(".nameBurShirt").text()}</section>
         <section class="itemQuantity">
-            <input type="number" value="${$(".burShirtQty").val()}">
+            <input type="number" class="burShirtQtyCart" value="${$(".burShirtQty").val()}">
         </section>
-            <section class="itemPrice"> @${($("#burShirtPrice").text())} each</section>
+            <section class="itemPrice"> @ $${($("#burShirtPrice").val())} each</section>
             <button type="button">
                 <i class="material-icons">clear</i>
             </button>
         </section>
-    </section>`)
+    </section>`);
+        burShirtTotal += $(".burShirtQty").val() * $("#burShirtPrice").val();
+        total();
         $("#hidePopupBurgundy").hide();
         $(".hideAdded").toggle();
     });
@@ -211,16 +292,16 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
             <section class="itemName">${$(".nameBlkShirt").text()}</section>
             <section class="itemQuantity">
-                <input type="number" value="${$(".blkShirtQty").val()}">
+                <input type="number" class="blkShirtQtyCart" value="${$(".blkShirtQty").val()}">
             </section>
-                <section class="itemPrice"> @${($(".price").val())} each</section>
+                <section class="itemPrice"> @ $${($("#blkShirtPrice").val())} each</section>
                 <button type="button">
                     <i class="material-icons">clear</i>
                 </button>
             </section>
         </section>`)
-        $(".total").text(null);
-        $(".total").append(`$${total += $(".blkShirtQty").val() * $(".price").val()}`)
+        blkShirtTotal += $(".blkShirtQty").val() * $("#blkShirtPrice").val();
+        total();
         $("#hidePopupBlack").hide();
         $(".hideAdded").toggle();
     });
@@ -230,14 +311,16 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
             <section class="itemName">${$(".nameWhiteShirt").text()}</section>
             <section class="itemQuantity">
-                <input type="number" value="${$(".whiteShirtQty").val()}">
+                <input type="number" class="whiteShirtQtyCart" value="${$(".whiteShirtQty").val()}">
              </section>
-                <section class="itemPrice"> @${($("#whiteShirtPrice").text())} each</section>
+                <section class="itemPrice"> @ $${($("#whiteShirtPrice").val())} each</section>
                 <button type="button">
                     <i class="material-icons">clear</i>
                 </button>
             </section>
-        </section>`)
+        </section>`);
+        whiteShirtTotal += $(".whiteShirtQty").val() * $("#whiteShirtPrice").val();
+        total();
         $("#hidePopupWhite").hide();
         $(".hideAdded").toggle();
     });
@@ -247,14 +330,16 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
             <section class="itemName">${$(".nameHat").text()}</section>
             <section class="itemQuantity">
-                <input type="number" value="${$(".hatQty").val()}">
+                <input type="number" class="hatQtyCart" value="${$(".hatQty").val()}">
             </section>
-                <section class="itemPrice"> @${($("#hatPrice").text())} each</section>
+                <section class="itemPrice"> @ $${($("#hatPrice").val())} each</section>
                 <button type="button">
                     <i class="material-icons">clear</i>
                 </button>
             </section>
-        </section>`)
+        </section>`);
+        hatTotal += $(".hatQty").val() * $("#hatPrice").val();
+        total();
         $("#hidePopupHat").hide();
         $(".hideAdded").toggle();
     });
@@ -264,14 +349,16 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
                 <section class="itemName">${$(".nameCymbal").text()}</section>
                 <section class="itemQuantity">
-                    <input type="number" value="${$(".cymQty").val()}">
+                    <input type="number" class="cymQtyCart" value="${$(".cymQty").val()}">
                 </section>
-                    <section class="itemPrice"> @${($("#cymbalPrice").text())} each</section>
+                    <section class="itemPrice"> @ $${($("#cymbalPrice").val())} each</section>
                     <button type="button">
                         <i class="material-icons">clear</i>
                     </button>
                 </section>
-            </section>`)
+            </section>`);
+            cymTotal += $(".cymQty").val() * $("#cymbalPrice").val();
+            total();
         $("#hidePopupCymbal").hide();
         $(".hideAdded").toggle();
     });
@@ -281,14 +368,16 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
                 <section class="itemName">${$(".nameP1").text()}</section>
                 <section class="itemQuantity">
-                    <input type="number" value="${$(".post1Qty").val()}">
+                    <input type="number" class="post1QtyCart" value="${$(".post1Qty").val()}">
                 </section>
-                    <section class="itemPrice"> @${($("#p1Price").text())} each</section>
+                    <section class="itemPrice"> @ $${($("#p1Price").val())} each</section>
                     <button type="button">
                         <i class="material-icons">clear</i>
                     </button>
                 </section>
-            </section>`)
+            </section>`);
+            post1Total += $(".post1Qty").val() * $("#p1Price").val();
+            total();
         $("#hidePopupP1").hide();
         $(".hideAdded").toggle();
     });
@@ -298,14 +387,16 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
                 <section class="itemName">${$(".nameP2").text()}</section>
                 <section class="itemQuantity">
-                    <input type="number" value="${$(".post2Qty").val()}">
+                    <input type="number" class="post2QtyCart" value="${$(".post2Qty").val()}">
                 </section>
-                    <section class="itemPrice"> @${($("#p2Price").text())} each</section>
+                    <section class="itemPrice"> @ $${($("#p2Price").val())} each</section>
                     <button type="button">
                         <i class="material-icons">clear</i>
                     </button>
                 </section>
             </section>`)
+            post2Total += $(".post2Qty").val() * $("#p2Price").val();
+            total();
         $("#hidePopupP2").hide();
         $(".hideAdded").toggle();
     });
@@ -315,14 +406,16 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
                         <section class="itemName">${$(".nameP3").text()}</section>
                         <section class="itemQuantity">
-                            <input type="number" value="${$(".post3Qty").val()}">
+                            <input type="number" class="post3QtyCart" value="${$(".post3Qty").val()}">
                         </section>
-                            <section class="itemPrice"> @${($("#p3Price").text())} each</section>
+                            <section class="itemPrice"> @ $${($("#p3Price").val())} each</section>
                             <button type="button">
                                 <i class="material-icons">clear</i>
                             </button>
                         </section>
-                    </section>`)
+                    </section>`);
+                    post3Total += $(".post3Qty").val() * $("#p3Price").val();
+                    total();
         $("#hidePopupP3").hide();
         $(".hideAdded").toggle();
     });
@@ -332,14 +425,16 @@ $(document).ready(() => {
         $(".itemContainer").append(`<section class="items">
                             <section class="itemName">${$(".nameTix1").text()}</section>
                             <section class="itemQuantity">
-                                <input type="number" value="${$(".tix1Qty").val()}">
+                                <input type="number" class="tix1QtyCart" value="${$(".tix1Qty").val()}">
                             </section>
-                                <section class="itemPrice"> @${($("#tix1Price").text())} each</section>
+                                <section class="itemPrice"> @ $${($("#tix1Price").val())} each</section>
                                 <button type="button">
                                     <i class="material-icons">clear</i>
                                 </button>
                             </section>
-                        </section>`)
+                        </section>`);
+                        tix1Total += $(".tix1Qty").val() *  $("#tix1Price").val();
+                        total();
         $("#hidePopupTix1").hide();
         $(".hideAdded").toggle();
     });
@@ -349,18 +444,21 @@ $("body").on("click", "#tickets2", (e) => {
     $(".itemContainer").append(`<section class="items">
                         <section class="itemName">${$(".nameTix2").text()}</section>
                         <section class="itemQuantity">
-                            <input type="number" value="${$(".tix2Qty").val()}">
+                            <input type="number" class="tix2QtyCart" value="${$(".tix2Qty").val()}">
                         </section>
-                            <section class="itemPrice"> @${($("#tix2Price").text())} each</section>
+                            <section class="itemPrice"> @ $${($("#tix2Price").val())} each</section>
                             <button type="button">
                                 <i class="material-icons">clear</i>
                             </button>
                         </section>
-                    </section>`)
+                    </section>`);
+                    tix2Total += $(".tix2Qty").val() *  $("#tix2Price").val();
+                    total();
     $("#hidePopupTix2").hide();
     $(".hideAdded").toggle();
 });
 // End Add Tix 2
+
 
 $("body").on("click", ".closeAdded", (e) => {
     $(".hideAdded").toggle();
@@ -369,7 +467,14 @@ $("body").on("click", ".closeAdded", (e) => {
 // Cart Buttons
  $("body").on("click", ".clear-button", (e) => {
         $(".itemContainer").html("")
-    })
+        clear();
+        total();
+    });
+
+$("body").on("click", ".update-button", (e) => {
+    update();
+})
+
 
     //CD QTY BTNS
     $("body").on("click", ".cdQtyAdd", (e) => {
@@ -597,6 +702,10 @@ $("body").on("click", ".closeAdded", (e) => {
             qty--;
             $(".tix2Qty").val(qty);
         }
+    });
+    $("body").on("click", "#checkoutbtn", (e) => {
+        $("#mainpagehide").hide();
+        $(".hidecheckout").removeClass().addClass("checkout-page");
     });
 
 });
