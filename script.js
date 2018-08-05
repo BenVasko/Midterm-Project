@@ -708,4 +708,10 @@ $("body").on("click", ".update-button", (e) => {
         $(".hidecheckout").removeClass().addClass("checkout-page");
     });
 
+    $("body").on("click", "#checkoutbtn", (e) => {
+        $(".itemName").text(function(i, itemtext) {
+            console.log(itemtext, i);
+            $(".columnscheckout").append(`<section class="itemnamecheckout">${itemtext}`);
+        })
+    });
 });
