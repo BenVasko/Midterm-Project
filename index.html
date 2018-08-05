@@ -53,7 +53,7 @@
         <section class="popup-image" id="CD">
             <img src="pictures/album-art.jpg">
         </section>
-        <p class="popup-price" id="cdPrice">$5.00</p>
+        <p class="popup-price">$<button id="cdPrice" value="5.00">5.00</button></p>
         <section class="adjust-quantity">
             <button type="button">
                 <i class="material-icons cdQtyRemove">remove</i>
@@ -90,7 +90,7 @@
         <section class="popup-image" id="vinyl">
             <img src="pictures/vinyl.png">
         </section>
-        <p class="popup-price" id="vinylPrice">$10.00</p>
+        <p class="popup-price">$<button id="vinylPrice" value="10.00">10.00</button></p>
         <section class="adjust-quantity">
             <button type="button">
                 <i class="material-icons vinylQtyRemove">remove</i>
@@ -127,7 +127,7 @@
         <section class="popup-image">
             <img src="pictures/burgundy-shirt.jpg">
         </section>
-        <p class="popup-price" id="burShirtPrice">$30.00</p>
+        <p class="popup-price">$<button id="burShirtPrice" value="30.00">30.00</button></p>
         <section class="adjust-quantity">
             <button type="button">
                 <i class="material-icons burShirtQtyRemove">remove</i>
@@ -155,7 +155,7 @@
         <section class="popup-image">
             <img src="pictures/black-shirt.jpg">
         </section>
-        <p class="popup-price" id="blkShirtPrice">$20.00</p>
+        <p class="popup-price">$<button id="blkShirtPrice" value="20.00">20.00</button></p>
         <section class="adjust-quantity">
             <button type="button">
                 <i class="material-icons blkShirtQtyRemove">remove</i>
@@ -183,7 +183,7 @@
         <section class="popup-image">
             <img src="pictures/white-shirt.jpg">
         </section>
-        <p class="popup-price" id="whiteShirtPrice">$20.00</p>
+        <p class="popup-price">$<button id="whiteShirtPrice" value="20.00">20.00</button></p>
         <section class="adjust-quantity">
             <button type="button">
                 <i class="material-icons whiteShirtQtyRemove">remove</i>
@@ -211,7 +211,7 @@
         <section class="popup-image">
             <img src="pictures/dad-hat.png">
         </section>
-        <p class="popup-price" id="hatPrice">$15.00</p>
+        <p class="popup-price">$<button id="hatPrice" value="15.00">15.00</button></p>
         <section class="adjust-quantity">
             <button type="button">
                 <i class="material-icons hatQtyRemove">remove</i>
@@ -239,7 +239,7 @@
         <section class="popup-image">
             <img src="pictures/poster-1.jpg">
         </section>
-        <p class="popup-price" id="p1Price">$5.00</p>
+        <p class="popup-price">$<button id="p1Price" value="5.00">5.00</button></p>
         <section class="adjust-quantity">
             <button type="button">
 
@@ -269,7 +269,7 @@
         <section class="popup-image">
             <img src="pictures/poster-2.jpg">
         </section>
-        <p class="popup-price" id="p2Price">$5.00</p>
+        <p class="popup-price">$<button id="p2Price" value="5.00">5.00</button></p>
         <section class="adjust-quantity">
             <button type="button">
 
@@ -299,7 +299,7 @@
         <section class="popup-image">
             <img src="pictures/poster-3.jpg">
         </section>
-        <p class="popup-price" id="p3Price">$5.00</p>
+        <p class="popup-price">$<button id="p3Price" value="5.00">5.00</button></p>
         <section class="adjust-quantity">
             <button type="button">
 
@@ -329,7 +329,7 @@
         <section class="popup-image">
             <img src="pictures/music-video-cymbal.jpg">
         </section>
-        <p class="popup-price" id="cymbalPrice">$30.00</p>
+        <p class="popup-price">$<button id="cymbalPrice" value="30.00">30.00</button></p>
         <section class="adjust-quantity">
             <button type="button">
 
@@ -359,7 +359,7 @@
         <section class="popup-image">
             <img src="pictures/july21show.jpg">
         </section>
-        <p class="popup-price" id="tix1Price">$8.00</p>
+        <p class="popup-price">$<button id="tix1Price" value="8.00">8.00</button></p>
         <section class="adjust-quantity">
             <button type="button">
 
@@ -390,7 +390,7 @@
         <section class="popup-image">
             <img src="pictures/aug18show.jpg">
         </section>
-        <p class="popup-price" id="tix2Price">$5.00</p>
+        <p class="popup-price">$<button id="tix2Price" value="5.00">5.00</button></p>
         <section class="adjust-quantity">
             <button type="button">
 
@@ -706,6 +706,11 @@
                 <button class="update-button carousel-inactive" type="button">UPDATE</button>
                 <button class="clear-button carousel-inactive" type="button">CLEAR</button>
             </section>
+            <section class="cartTotal">
+                <p>TOTAL:</p>
+                <section class="total"></section>
+            </section>
+        
             <button class="checkout-button carousel-active" type="button" id="checkoutbtn">CHECKOUT</button>
 
         </section>
