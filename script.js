@@ -1,21 +1,27 @@
 " use strict";
 $(document).ready(() => {
-    let cdTotal = 0;
-    let vinylTotal = 0;
-    let burShirtTotal = 0;
-    let blkShirtTotal = 0;
-    let whiteShirtTotal = 0;
-    let post1Total = 0;
-    let post2Total = 0;
-    let post3Total = 0;
-    let cymTotal = 0;
-    let hatTotal = 0;
-    let tix1Total = 0;
-    let tix2Total = 0;
-
+    let cdTotal = null;
+    let vinylTotal = null;
+    let burShirtTotal = null;
+    let blkShirtTotal = null;
+    let whiteShirtTotal = null;
+    let post1Total = null;
+    let post2Total = null;
+    let post3Total = null;
+    let cymTotal = null;
+    let hatTotal = null;
+    let tix1Total = null;
+    let tix2Total = null;
+    
     let total = () => {
         $(".total").text(null);
         $(".total").append(`$${cdTotal + vinylTotal + burShirtTotal + blkShirtTotal + whiteShirtTotal + post1Total + post2Total + post3Total + cymTotal + hatTotal + tix1Total + tix2Total}`)
+        $(".subtotal").text(null);
+        $(".subtotal").append(`$${cdTotal + vinylTotal + burShirtTotal + blkShirtTotal + whiteShirtTotal + post1Total + post2Total + post3Total + cymTotal + hatTotal + tix1Total + tix2Total}`)
+        $(".tax").text(null);
+        $(".tax").append(`$${cdTotal*.06 + vinylTotal*.06 + blkShirtTotal*.06 + burShirtTotal*.06 + whiteShirtTotal*.06 + post1Total*.06 + post2Total*.06 + post3Total*.06 + cymTotal*.06 + hatTotal*.06 + tix1Total*.06 + tix2Total *.06}`);
+        $(".taxTotal").text(null);
+        $(".taxTotal").append(`$${cdTotal*1.06 + vinylTotal*1.06 + blkShirtTotal*1.06 + burShirtTotal*1.06 + whiteShirtTotal*1.06 + post1Total*1.06 + post2Total*1.06 + post3Total*1.06 + cymTotal*1.06 + hatTotal*1.06 + tix1Total*1.06 + tix2Total *1.06}`);  
     };
 
     let update = () => {
@@ -26,10 +32,11 @@ $(document).ready(() => {
             cdTotal = $(".cdQtyCart").val() * $("#cdPrice").val();
         }
         if (burShirtTotal > 0) {
-            burShirtTotal = $(".burShirtQtyCart").val() * $("#burShirtPrice").val();
+            burShirtTotal = $(".burShirtQtyCart").val() * $("#burShirtPrice").val()
+            burShirtTax = $(".burShirtQtyCart").val() * $("#burShirtPrice").val()
         }
         if (blkShirtTotal > 0) {
-            blkShirtTotal = $(".blkShirtQtyCart").val() * $("#blkShirtPrice").val();
+            blkShirtTotal = $(".blkShirtQtyCart").val() * $("#blkShirtPrice").val()
         }
         if (whiteShirtTotal > 0) {
             whiteShirtTotal = $(".whiteShirtQtyCart").val() * $("#whiteShirtPrice").val();
@@ -740,6 +747,7 @@ $("body").on("click", ".update-button", (e) => {
         $("#mainpagehide").hide();
         $(".hidecheckout").removeClass().addClass("checkout-page");
     });
+
     $("body").on("click", ".indvClear", (e) => {
         $(".indvClear").parent().empty();
     });
@@ -936,3 +944,4 @@ $("body").on("click", ".update-button", (e) => {
         $(".credit-form").show();
     });
 }); 
+
