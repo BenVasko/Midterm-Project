@@ -13,11 +13,13 @@ body {
 }
 .added{
     display: flex;
+    position: absolute;
     justify-content: center;
     background-color: #fffdf6;
     width: 50%;
     flex-direction: column;
     margin-left: 25%;
+    z-index: 99999999;
 }
 .addedP {
     display: flex;
