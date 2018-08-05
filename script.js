@@ -224,12 +224,7 @@ $(document).ready(() => {
         }
     });
 
-
-
-
-    // John: add items to cart when clicked, item count over cart
     // Add Items to Cart
-
     // Add Vinyl
     $("body").on("click", "#vinylRecord", (e) => {
         $(".itemContainer").append(`<section class="items">
@@ -238,7 +233,7 @@ $(document).ready(() => {
             <input type="number" class="vinylQtyCart" value="${$(".vinylQty").val()}">
         </section>
             <section class="itemPrice"> @ $${($("#vinylPrice").val())} each</section>
-            <button type="button">
+            <button type="button" class="vinClear">
                 <i class="material-icons">clear</i>
             </button>
         </section>
@@ -247,6 +242,9 @@ $(document).ready(() => {
         total();
         $("#hidePopupVinyl").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".vinClear", (e) => {
+        $(".vinClear").parent().empty();
     });
     // End Add Vinyl
     // Add CD
@@ -257,7 +255,7 @@ $(document).ready(() => {
             <input type="number" class="cdQtyCart" value="${$(".cdQty").val()}">   
         </section>
             <section class="itemPrice"> @ $${($("#cdPrice").val())} each</section>
-            <button type="button">
+            <button type="button" class="cdClear">
                 <i class="material-icons">clear</i>
             </button>
         </section>
@@ -267,6 +265,9 @@ $(document).ready(() => {
         $("#hidePopupCD").hide();
         $(".hideAdded").toggle();
     });
+    $("body").on("click", ".cdClear", (e) => {
+        $(".cdClear").parent().empty();
+    });
     // End Add CD
     // Add Burgundy Shirt
     $("body").on("click", "#burShirt", (e) => {
@@ -275,8 +276,8 @@ $(document).ready(() => {
         <section class="itemQuantity">
             <input type="number" class="burShirtQtyCart" value="${$(".burShirtQty").val()}">
         </section>
-            <section class="itemPrice"> @ $${($("#burShirtPrice").val())} each</section>
-            <button type="button">
+            <section class="itemPrice"> @${($("#burShirtPrice").val())} each</section>
+            <button type="button" class="burClear">
                 <i class="material-icons">clear</i>
             </button>
         </section>
@@ -284,26 +285,34 @@ $(document).ready(() => {
         burShirtTotal += $(".burShirtQty").val() * $("#burShirtPrice").val();
         total();
         $("#hidePopupBurgundy").hide();
-        $(".hideAdded").toggle();
+        $(".hideAdded").toggle(); 
+    });
+    $("body").on("click", ".burClear", (e) => {
+        $(".burClear").parent().empty();
     });
     // End Add Burgundy Shirt
     // Add Black Shirt
     $("body").on("click", "#blkShirt", (e) => {
-        $(".itemContainer").append(`<section class="items">
+        $(".itemContainer").append(`<section cless="delContainer">
+        <section class="items">
             <section class="itemName">${$(".nameBlkShirt").text()}</section>
             <section class="itemQuantity">
                 <input type="number" class="blkShirtQtyCart" value="${$(".blkShirtQty").val()}">
             </section>
                 <section class="itemPrice"> @ $${($("#blkShirtPrice").val())} each</section>
-                <button type="button">
+                <button type="button" class="blkClear">
                     <i class="material-icons">clear</i>
                 </button>
             </section>
+        </section>
         </section>`)
         blkShirtTotal += $(".blkShirtQty").val() * $("#blkShirtPrice").val();
         total();
         $("#hidePopupBlack").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".blkClear", (e) => {
+        $(".blkClear").parent().empty();
     });
     // End Add Black Shirt
     // Add White Shirt
@@ -314,7 +323,7 @@ $(document).ready(() => {
                 <input type="number" class="whiteShirtQtyCart" value="${$(".whiteShirtQty").val()}">
              </section>
                 <section class="itemPrice"> @ $${($("#whiteShirtPrice").val())} each</section>
-                <button type="button">
+                <button type="button" class="whtClear">
                     <i class="material-icons">clear</i>
                 </button>
             </section>
@@ -323,6 +332,9 @@ $(document).ready(() => {
         total();
         $("#hidePopupWhite").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".whtClear", (e) => {
+        $(".whtClear").parent().empty();
     });
     // End Add White Shirt
     // Add Dad Hat
@@ -333,7 +345,7 @@ $(document).ready(() => {
                 <input type="number" class="hatQtyCart" value="${$(".hatQty").val()}">
             </section>
                 <section class="itemPrice"> @ $${($("#hatPrice").val())} each</section>
-                <button type="button">
+                <button type="button" class="hatClear">
                     <i class="material-icons">clear</i>
                 </button>
             </section>
@@ -342,6 +354,9 @@ $(document).ready(() => {
         total();
         $("#hidePopupHat").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".hatClear", (e) => {
+        $(".hatClear").parent().empty();
     });
     // End Add Dad Hat
     // Add Cymbal
@@ -352,7 +367,7 @@ $(document).ready(() => {
                     <input type="number" class="cymQtyCart" value="${$(".cymQty").val()}">
                 </section>
                     <section class="itemPrice"> @ $${($("#cymbalPrice").val())} each</section>
-                    <button type="button">
+                    <button type="button" class="cymClear">
                         <i class="material-icons">clear</i>
                     </button>
                 </section>
@@ -361,6 +376,9 @@ $(document).ready(() => {
             total();
         $("#hidePopupCymbal").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".cymClear", (e) => {
+        $(".cymClear").parent().empty();
     });
     // End Add Cymbal
     // Add Poster 1
@@ -372,7 +390,7 @@ $(document).ready(() => {
                 </section>
                     <section class="itemPrice"> @ $${($("#p1Price").val())} each</section>
                     <button type="button">
-                        <i class="material-icons">clear</i>
+                        <i class="material-icons" class="p1Clear">clear</i>
                     </button>
                 </section>
             </section>`);
@@ -380,6 +398,9 @@ $(document).ready(() => {
             total();
         $("#hidePopupP1").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".p1Clear", (e) => {
+        $(".p1Clear").parent().empty();
     });
     // End Add Poster 1
     // Add Poster 2
@@ -390,7 +411,7 @@ $(document).ready(() => {
                     <input type="number" class="post2QtyCart" value="${$(".post2Qty").val()}">
                 </section>
                     <section class="itemPrice"> @ $${($("#p2Price").val())} each</section>
-                    <button type="button">
+                    <button type="button" class="p2Clear">
                         <i class="material-icons">clear</i>
                     </button>
                 </section>
@@ -399,6 +420,9 @@ $(document).ready(() => {
             total();
         $("#hidePopupP2").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".p2Clear", (e) => {
+        $(".p2Clear").parent().empty();
     });
     // End Add Poster 2
     // Add Poster 3
@@ -409,7 +433,7 @@ $(document).ready(() => {
                             <input type="number" class="post3QtyCart" value="${$(".post3Qty").val()}">
                         </section>
                             <section class="itemPrice"> @ $${($("#p3Price").val())} each</section>
-                            <button type="button">
+                            <button type="button" class="p3Clear">
                                 <i class="material-icons">clear</i>
                             </button>
                         </section>
@@ -418,6 +442,9 @@ $(document).ready(() => {
                     total();
         $("#hidePopupP3").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".p3Clear", (e) => {
+        $(".p3Clear").parent().empty();
     });
     // End Add Poster 3
     // Add Tix 1
@@ -428,7 +455,7 @@ $(document).ready(() => {
                                 <input type="number" class="tix1QtyCart" value="${$(".tix1Qty").val()}">
                             </section>
                                 <section class="itemPrice"> @ $${($("#tix1Price").val())} each</section>
-                                <button type="button">
+                                <button type="button" class="tix1Clear">
                                     <i class="material-icons">clear</i>
                                 </button>
                             </section>
@@ -438,16 +465,19 @@ $(document).ready(() => {
         $("#hidePopupTix1").hide();
         $(".hideAdded").toggle();
     });
+    $("body").on("click", ".tix1Clear", (e) => {
+        $(".tix1Clear").parent().empty();
+    });
     // End Add Tix 1
-// Add Tix 2
-$("body").on("click", "#tickets2", (e) => {
-    $(".itemContainer").append(`<section class="items">
+    // Add Tix 2
+    $("body").on("click", "#tickets2", (e) => {
+        $(".itemContainer").append(`<section class="items">
                         <section class="itemName">${$(".nameTix2").text()}</section>
                         <section class="itemQuantity">
                             <input type="number" class="tix2QtyCart" value="${$(".tix2Qty").val()}">
                         </section>
                             <section class="itemPrice"> @ $${($("#tix2Price").val())} each</section>
-                            <button type="button">
+                            <button type="button" class="tix2Clear">
                                 <i class="material-icons">clear</i>
                             </button>
                         </section>
@@ -457,6 +487,9 @@ $("body").on("click", "#tickets2", (e) => {
     $("#hidePopupTix2").hide();
     $(".hideAdded").toggle();
 });
+    $("body").on("click", ".tix2Clear", (e) => {
+        $(".tix2Clear").parent().empty();
+    });
 // End Add Tix 2
 
 
@@ -464,8 +497,8 @@ $("body").on("click", ".closeAdded", (e) => {
     $(".hideAdded").toggle();
 });
 
-// Cart Buttons
- $("body").on("click", ".clear-button", (e) => {
+    // Cart Buttons
+    $("body").on("click", ".clear-button", (e) => {
         $(".itemContainer").html("")
         clear();
         total();
@@ -577,7 +610,7 @@ $("body").on("click", ".update-button", (e) => {
         qty++;
         $(".hatQty").val(qty);
     });
-    
+
     $("body").on("click", ".hatQtyRemove", (e) => {
         let qty = $(".hatQty").val();
         if (qty === 1) {
@@ -596,7 +629,7 @@ $("body").on("click", ".update-button", (e) => {
         qty++;
         $(".post1Qty").val(qty);
     });
-    
+
     $("body").on("click", ".post1QtyRemove", (e) => {
         let qty = $(".post1Qty").val();
         if (qty === 1) {
@@ -615,7 +648,7 @@ $("body").on("click", ".update-button", (e) => {
         qty++;
         $(".post2Qty").val(qty);
     });
-    
+
     $("body").on("click", ".post2QtyRemove", (e) => {
         let qty = $(".post2Qty").val();
         if (qty === 1) {
@@ -634,7 +667,7 @@ $("body").on("click", ".update-button", (e) => {
         qty++;
         $(".post3Qty").val(qty);
     });
-    
+
     $("body").on("click", ".post3QtyRemove", (e) => {
         let qty = $(".post3Qty").val();
         if (qty === 1) {
@@ -653,7 +686,7 @@ $("body").on("click", ".update-button", (e) => {
         qty++;
         $(".cymQty").val(qty);
     });
-    
+
     $("body").on("click", ".cymQtyRemove", (e) => {
         let qty = $(".cymQty").val();
         if (qty === 1) {
@@ -672,7 +705,7 @@ $("body").on("click", ".update-button", (e) => {
         qty++;
         $(".tix1Qty").val(qty);
     });
-    
+
     $("body").on("click", ".tix1QtyRemove", (e) => {
         let qty = $(".tix1Qty").val();
         if (qty === 1) {
@@ -691,7 +724,7 @@ $("body").on("click", ".update-button", (e) => {
         qty++;
         $(".tix2Qty").val(qty);
     });
-    
+
     $("body").on("click", ".tix2QtyRemove", (e) => {
         let qty = $(".tix2Qty").val();
         if (qty === 1) {
@@ -707,11 +740,13 @@ $("body").on("click", ".update-button", (e) => {
         $("#mainpagehide").hide();
         $(".hidecheckout").removeClass().addClass("checkout-page");
     });
-
+    $("body").on("click", ".indvClear", (e) => {
+        $(".indvClear").parent().empty();
+    });
     $("body").on("click", "#checkoutbtn", (e) => {
         $(".itemName").text(function(i, itemtext) {
             console.log(itemtext, i);
             $(".columnscheckout").append(`<section class="itemnamecheckout">${itemtext}`);
         })
-    });
+    });    
 });
