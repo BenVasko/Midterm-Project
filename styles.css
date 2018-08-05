@@ -296,8 +296,24 @@ font-size: 20px;
     display: none;
   }
 
-.columns {
+.columnscheckout {
     margin: 1% auto;
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1.5% auto; 
+    flex-direction: column;
+
+}
+
+.itemnamecheckout {
+    display: flex;
+    /* flex-direction: column; */
+}
+.itempricecheckout {
+    display: flex;
+    /* flex-direction: column; */
+
 }
 
 .checkout-button {
@@ -358,12 +374,22 @@ font-size: 20px;
     margin: 1.5% auto;
 }
 
-.subtotal, .tax, .total {
+.cash-form {
+    display: none;
+}
+.credit-form {
+    display: none;
+}
+.subtotalcontainer, .tax, .totalcontainer {
     display: flex;
     width: 80%;
     margin: 1.5% auto;
     justify-content: space-between;
 }
+
+.total {
+    justify-content: flex-end;
+}    
 
 .amount-due, .change-due {
     display: flex;

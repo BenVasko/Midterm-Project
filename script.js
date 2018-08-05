@@ -743,4 +743,196 @@ $("body").on("click", ".update-button", (e) => {
     $("body").on("click", ".indvClear", (e) => {
         $(".indvClear").parent().empty();
     });
-});
+    // $("body").on("click", "#checkoutbtn", (e) => {
+    //     $(".itemName").text(function(i, itemtext) {
+    //         $(".columnscheckout").append(`<section class="itemnamecheckout">${itemtext}`)
+    //     })
+    //     $(".itemPrice").text(function(i, itemprice) {
+    //         $(".columnscheckout").append(`<section class="itempricecheckout">${itemprice}`)
+    //     })
+    // });
+    $("body").on("click", "#compactDisc", (e) => {
+        $(".columnscheckout").append(`<section class="items">
+        <section class="itemName">${$(".nameCD").text()}</section>
+        <section class="itemQuantity">
+            <input type="number" class="cdQtyCart" value="${$(".cdQtyCart").val()}">   
+        </section>
+            <section class="itemPrice"> @ $${($("#cdPrice").val())} each</section>
+            <button type="button" class="cdClear">
+                <i class="material-icons">clear</i>
+            </button>
+        </section>
+    </section>`);
+    });
+    $("body").on("click", "#vinylRecord", (e) => {
+        $(".columnscheckout").append(`<section class="items">
+        <section class="itemName">${$(".nameVinyl").text()}</section>
+        <section class="itemQuantity">
+            <input type="number" class="vinylQtyCart" value="${$(".vinylQtyCart").val()}">
+        </section>
+            <section class="itemPrice"> @ $${($("#vinylPrice").val())} each</section>
+            <button type="button" class="vinClear">
+                <i class="material-icons">clear</i>
+            </button>
+        </section>
+    </section>`);
+    });
+    // End Add Vinyl
+    // Add Burgundy Shirt
+    $("body").on("click", "#burShirt", (e) => {
+        $(".columnscheckout").append(`<section class="items">
+        <section class="itemName">${$(".nameBurShirt").text()}</section>
+        <section class="itemQuantity">
+            <input type="number" class="burShirtQtyCart" value="${$(".burShirtQtyCart").val()}">
+        </section>
+            <section class="itemPrice"> @${($("#burShirtPrice").val())} each</section>
+            <button type="button" class="burClear">
+                <i class="material-icons">clear</i>
+            </button>
+        </section>
+        </section>`);
+    });
+    // End Add Burgundy Shirt
+    // Add Black Shirt
+    $("body").on("click", "#blkShirt", (e) => {
+        $(".columnscheckout").append(`<section cless="delContainer">
+        <section class="items">
+            <section class="itemName">${$(".nameBlkShirt").text()}</section>
+            <section class="itemQuantity">
+                <input type="number" class="blkShirtQtyCart" value="${$(".blkShirtQtyCart").val()}">
+            </section>
+                <section class="itemPrice"> @ $${($("#blkShirtPrice").val())} each</section>
+                <button type="button" class="blkClear">
+                    <i class="material-icons">clear</i>
+                </button>
+            </section>
+        </section>
+        </section>`);
+    });
+    // End Add Black Shirt
+    // Add White Shirt
+    $("body").on("click", "#whtShirt", (e) => {
+        $(".columnscheckout").append(`<section class="items">
+            <section class="itemName">${$(".nameWhiteShirt").text()}</section>
+            <section class="itemQuantity">
+                <input type="number" class="whiteShirtQtyCart" value="${$(".whiteShirtQtyCart").val()}">
+             </section>
+                <section class="itemPrice"> @ $${($("#whiteShirtPrice").val())} each</section>
+                <button type="button" class="whtClear">
+                    <i class="material-icons">clear</i>
+                </button>
+            </section>
+        </section>`);
+    });
+    // End Add White Shirt
+    // Add Dad Hat
+    $("body").on("click", "#dadHat", (e) => {
+        $(".columnscheckout").append(`<section class="items">
+            <section class="itemName">${$(".nameHat").text()}</section>
+            <section class="itemQuantity">
+                <input type="number" class="hatQtyCart" value="${$(".hatQtyCart").val()}">
+            </section>
+                <section class="itemPrice"> @ $${($("#hatPrice").val())} each</section>
+                <button type="button" class="hatClear">
+                    <i class="material-icons">clear</i>
+                </button>
+            </section>
+        </section>`);
+    });
+    // End Add Dad Hat
+    // Add Cymbal
+    $("body").on("click", "#usedCymbal", (e) => {
+        $(".columnscheckout").append(`<section class="items">
+                <section class="itemName">${$(".nameCymbal").text()}</section>
+                <section class="itemQuantity">
+                    <input type="number" class="cymQtyCart" value="${$(".cymQtyCart").val()}">
+                </section>
+                    <section class="itemPrice"> @ $${($("#cymbalPrice").val())} each</section>
+                    <button type="button" class="cymClear">
+                        <i class="material-icons">clear</i>
+                    </button>
+                </section>
+            </section>`);
+    });
+    // End Add Cymbal
+    // Add Poster 1
+    $("body").on("click", "#p1", (e) => {
+        $(".columnscheckout").append(`<section class="items">
+                <section class="itemName">${$(".nameP1").text()}</section>
+                <section class="itemQuantity">
+                    <input type="number" class="post1QtyCart" value="${$(".post1QtyCart").val()}">
+                </section>
+                    <section class="itemPrice"> @ $${($("#p1Price").val())} each</section>
+                    <button type="button">
+                        <i class="material-icons" class="p1Clear">clear</i>
+                    </button>
+                </section>
+            </section>`);
+    });
+    // End Add Poster 1
+    // Add Poster 2
+    $("body").on("click", "#p2", (e) => {
+        $(".columnscheckout").append(`<section class="items">
+                <section class="itemName">${$(".nameP2").text()}</section>
+                <section class="itemQuantity">
+                    <input type="number" class="post2QtyCart" value="${$(".post2QtyCart").val()}">
+                </section>
+                    <section class="itemPrice"> @ $${($("#p2Price").val())} each</section>
+                    <button type="button" class="p2Clear">
+                        <i class="material-icons">clear</i>
+                    </button>
+                </section>
+            </section>`);
+    });
+    // End Add Poster 2
+    // Add Poster 3
+    $("body").on("click", "#p3", (e) => {
+        $(".columnscheckout").append(`<section class="items">
+                        <section class="itemName">${$(".nameP3").text()}</section>
+                        <section class="itemQuantity">
+                            <input type="number" class="post3QtyCart" value="${$(".post3QtyCart").val()}">
+                        </section>
+                            <section class="itemPrice"> @ $${($("#p3Price").val())} each</section>
+                            <button type="button" class="p3Clear">
+                                <i class="material-icons">clear</i>
+                            </button>
+                        </section>
+                    </section>`);
+    });
+    // End Add Poster 3
+    // Add Tix 1
+    $("body").on("click", "#tickets1", (e) => {
+        $(".columnscheckout").append(`<section class="items">
+                            <section class="itemName">${$(".nameTix1").text()}</section>
+                            <section class="itemQuantity">
+                                <input type="number" class="tix1QtyCart" value="${$(".tix1QtyCart").val()}">
+                            </section>
+                                <section class="itemPrice"> @ $${($("#tix1Price").val())} each</section>
+                                <button type="button" class="tix1Clear">
+                                    <i class="material-icons">clear</i>
+                                </button>
+                            </section>
+                        </section>`);
+    });
+    // End Add Tix 1
+    // Add Tix 2
+    $("body").on("click", "#tickets2", (e) => {
+        $(".columnscheckout").append(`<section class="items">
+                        <section class="itemName">${$(".nameTix2").text()}</section>
+                        <section class="itemQuantity">
+                            <input type="number" class="tix2QtyCart" value="${$(".tix2QtyCart").val()}">
+                        </section>
+                            <section class="itemPrice"> @ $${($("#tix2Price").val())} each</section>
+                            <button type="button" class="tix2Clear">
+                                <i class="material-icons">clear</i>
+                            </button>
+                        </section>
+                    </section>`);
+    });
+    $("body").on("click", ".cash", (e) => {
+        $(".cash-form").show();
+    });
+    $("body").on("click", ".credit", (e) => {
+        $(".credit-form").show();
+    });
+}); 
