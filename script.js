@@ -163,13 +163,16 @@ $(document).ready(() => {
             <input type="number" value="${$(".vinylQty").val()}">
         </section>
             <section class="itemPrice"> @${($("#vinylPrice").text())} each</section>
-            <button type="button">
+            <button type="button" class="vinClear">
                 <i class="material-icons">clear</i>
             </button>
         </section>
     </section>`)
         $("#hidePopupVinyl").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".vinClear", (e) => {
+        $(".vinClear").parent().empty();
     });
     // End Add Vinyl
     // Add CD
@@ -180,13 +183,16 @@ $(document).ready(() => {
             <input type="number" value="${$(".cdQty").val()}">   
         </section>
             <section class="itemPrice"> @${($("#cdPrice").text())} each</section>
-            <button type="button">
+            <button type="button" class="cdClear">
                 <i class="material-icons">clear</i>
             </button>
         </section>
     </section>`)
         $("#hidePopupCD").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".cdClear", (e) => {
+        $(".cdClear").parent().empty();
     });
     // End Add CD
     // Add Burgundy Shirt
@@ -197,30 +203,38 @@ $(document).ready(() => {
             <input type="number" value="${$(".burShirtQty").val()}">
         </section>
             <section class="itemPrice"> @${($("#burShirtPrice").text())} each</section>
-            <button type="button">
+            <button type="button" class="burClear">
                 <i class="material-icons">clear</i>
             </button>
         </section>
     </section>`)
         $("#hidePopupBurgundy").hide();
-        $(".hideAdded").toggle();
+        $(".hideAdded").toggle(); 
+    });
+    $("body").on("click", ".burClear", (e) => {
+        $(".burClear").parent().empty();
     });
     // End Add Burgundy Shirt
     // Add Black Shirt
     $("body").on("click", "#blkShirt", (e) => {
-        $(".itemContainer").append(`<section class="items">
+        $(".itemContainer").append(`<section cless="delContainer">
+        <section class="items">
             <section class="itemName">${$(".nameBlkShirt").text()}</section>
             <section class="itemQuantity">
                 <input type="number" value="${$(".blkShirtQty").val()}">
             </section>
                 <section class="itemPrice"> @${($("#blkShirtPrice").text())} each</section>
-                <button type="button">
+                <button type="button" class="blkClear">
                     <i class="material-icons">clear</i>
                 </button>
             </section>
+        </section>
         </section>`)
         $("#hidePopupBlack").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".blkClear", (e) => {
+        $(".blkClear").parent().empty();
     });
     // End Add Black Shirt
     // Add White Shirt
@@ -231,13 +245,16 @@ $(document).ready(() => {
                 <input type="number" value="${$(".whiteShirtQty").val()}">
              </section>
                 <section class="itemPrice"> @${($("#whiteShirtPrice").text())} each</section>
-                <button type="button">
+                <button type="button" class="whtClear">
                     <i class="material-icons">clear</i>
                 </button>
             </section>
         </section>`)
         $("#hidePopupWhite").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".whtClear", (e) => {
+        $(".whtClear").parent().empty();
     });
     // End Add White Shirt
     // Add Dad Hat
@@ -248,13 +265,16 @@ $(document).ready(() => {
                 <input type="number" value="${$(".hatQty").val()}">
             </section>
                 <section class="itemPrice"> @${($("#hatPrice").text())} each</section>
-                <button type="button">
+                <button type="button" class="hatClear">
                     <i class="material-icons">clear</i>
                 </button>
             </section>
         </section>`)
         $("#hidePopupHat").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".hatClear", (e) => {
+        $(".hatClear").parent().empty();
     });
     // End Add Dad Hat
     // Add Cymbal
@@ -265,13 +285,16 @@ $(document).ready(() => {
                     <input type="number" value="${$(".cymQty").val()}">
                 </section>
                     <section class="itemPrice"> @${($("#cymbalPrice").text())} each</section>
-                    <button type="button">
+                    <button type="button" class="cymClear">
                         <i class="material-icons">clear</i>
                     </button>
                 </section>
             </section>`)
         $("#hidePopupCymbal").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".cymClear", (e) => {
+        $(".cymClear").parent().empty();
     });
     // End Add Cymbal
     // Add Poster 1
@@ -282,13 +305,16 @@ $(document).ready(() => {
                     <input type="number" value="${$(".post1Qty").val()}">
                 </section>
                     <section class="itemPrice"> @${($("#p1Price").text())} each</section>
-                    <button type="button">
+                    <button type="button" class="p1Clear">
                         <i class="material-icons">clear</i>
                     </button>
                 </section>
             </section>`)
         $("#hidePopupP1").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".p1Clear", (e) => {
+        $(".p1Clear").parent().empty();
     });
     // End Add Poster 1
     // Add Poster 2
@@ -299,13 +325,16 @@ $(document).ready(() => {
                     <input type="number" value="${$(".post2Qty").val()}">
                 </section>
                     <section class="itemPrice"> @${($("#p2Price").text())} each</section>
-                    <button type="button">
+                    <button type="button" class="p2Clear">
                         <i class="material-icons">clear</i>
                     </button>
                 </section>
             </section>`)
         $("#hidePopupP2").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".p2Clear", (e) => {
+        $(".p2Clear").parent().empty();
     });
     // End Add Poster 2
     // Add Poster 3
@@ -316,13 +345,16 @@ $(document).ready(() => {
                             <input type="number" value="${$(".post3Qty").val()}">
                         </section>
                             <section class="itemPrice"> @${($("#p3Price").text())} each</section>
-                            <button type="button">
+                            <button type="button" class="p3Clear">
                                 <i class="material-icons">clear</i>
                             </button>
                         </section>
                     </section>`)
         $("#hidePopupP3").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".p3Clear", (e) => {
+        $(".p3Clear").parent().empty();
     });
     // End Add Poster 3
     // Add Tix 1
@@ -333,13 +365,16 @@ $(document).ready(() => {
                                 <input type="number" value="${$(".tix1Qty").val()}">
                             </section>
                                 <section class="itemPrice"> @${($("#tix1Price").text())} each</section>
-                                <button type="button">
+                                <button type="button" class="tix1Clear">
                                     <i class="material-icons">clear</i>
                                 </button>
                             </section>
                         </section>`)
         $("#hidePopupTix1").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".tix1Clear", (e) => {
+        $(".tix1Clear").parent().empty();
     });
     // End Add Tix 1
     // Add Tix 2
@@ -350,13 +385,16 @@ $(document).ready(() => {
                             <input type="number" value="${$(".tix2Qty").val()}">
                         </section>
                             <section class="itemPrice"> @${($("#tix2Price").text())} each</section>
-                            <button type="button">
+                            <button type="button" class="tix2Clear">
                                 <i class="material-icons">clear</i>
                             </button>
                         </section>
                     </section>`)
         $("#hidePopupTix2").hide();
         $(".hideAdded").toggle();
+    });
+    $("body").on("click", ".tix2Clear", (e) => {
+        $(".tix2Clear").parent().empty();
     });
     // End Add Tix 2
 
@@ -601,5 +639,7 @@ $(document).ready(() => {
         $(".hidecheckout").removeClass().addClass("checkout-page");
         
     });
-
+    $("body").on("click", ".indvClear", (e) => {
+        $(".indvClear").parent().empty();
+    });
 });
