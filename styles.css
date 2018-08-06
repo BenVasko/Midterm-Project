@@ -488,6 +488,11 @@ datalist {
     top: 0;
 }
 
+.added button, .hatClear, .blkClear, .burClear, .whiteClear, .carousel-adjust-quantity button, .adjust-quantity button, .popup-price button, .popup-header button, .slideOutCart .items button {
+    border: none;
+    background: none;
+}
+
 #blackShirt, #burgundyShirt, #hat, #whiteShirt, #CD, #vinyl, #cymbal, #poster1, #poster2, #poster3, #augShow, #julyShow {
     height: auto;
 }
@@ -524,6 +529,42 @@ datalist {
     .slideOutCart {
         width: 50%;
         margin-top: 1%;
+    }
+
+    .added {
+        top: 25%;
+        width: 50%;
+        height: 50%;
+        left: 25%;
+    }
+
+    .added p {
+        margin-top: 3%;
+    }
+
+    .content {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    .container2 {
+        padding-top: 20px;
+    }
+    
+    .bandpicbox {
+        width: 45%;
+        z-index: 999999999;
+        background: #000;
+    }
+
+    .bandpicbox img {
+        width: 100%;
+        height: auto;
+        z-index: 9999999999;
+        padding-bottom: 150px;
+        padding-right: 30px;
+        background: #000;
     }
 }
  
