@@ -554,14 +554,14 @@ datalist {
     
     .bandpicbox {
         width: 45%;
-        z-index: 999999999;
+        z-index: 999;
         background: #000;
     }
 
     .bandpicbox img {
         width: 100%;
         height: auto;
-        z-index: 9999999999;
+        z-index: 9999;
         padding-bottom: 150px;
         padding-right: 30px;
         background: #000;
