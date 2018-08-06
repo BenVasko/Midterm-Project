@@ -15,10 +15,12 @@ body {
     position: absolute;
     justify-content: center;
     background-color: #fffdf6;
-    width: 50%;
+    width: 95%;
     flex-direction: column;
-    margin-left: 25%;
-    z-index: 99999999;
+    margin-top: 10%;
+    margin-left: 2.5%;
+    padding: 15px;
+    z-index: 999999999999999999999;
 }
 .receiptFooter {
     display: flex;
@@ -126,6 +128,10 @@ header a:hover, .cart:hover {
 /* This is the carousel css styling */
 .carousel-inner {
     height: 250px;
+}
+
+.carousel-adjust-quantity input, .adjust-quantity input {
+    width: 15%;
 }
  /* This denotes the CSS for the popups for the items */
  #hidePopupBurgundy, #hidePopupBlack, #hidePopupWhite, #hidePopupHat, #hidePopupP1, #hidePopupP2, #hidePopupP3, #hidePopupCD, #hidePopupVinyl, #hidePopupCymbal, #hidePopupTix1, #hidePopupTix2 {
@@ -300,10 +306,20 @@ padding: 5px;
 align-items: center;
 }
 
+.items input {
+    width: 30%;
+}
+
 .slideOutCart a {
     display: flex;
     justify-content: center;
     text-decoration: none;
+}
+
+.cartTotal {
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
 }
 
 /*CHECKOUT PAGE*/
@@ -319,7 +335,11 @@ align-items: center;
     width: 100%;
     margin: 1.5% auto; 
     flex-direction: column;
+}
 
+#contShop {
+    margin: 0 auto;
+    width: 70%;
 }
 
 .itemnamecheckout {
@@ -367,6 +387,10 @@ align-items: center;
     cursor: pointer;
 }
 
+.items button {
+    width: 15%
+}
+
 .checkout-page h1 {
     font-size: 40px;
 }
@@ -386,7 +410,7 @@ align-items: center;
 .checkout-cart, .checkout-order-summary, .way-to-pay, .cash-form, .credit-form, .name-number {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
     margin: 1.5% auto;
 }
 
@@ -462,6 +486,10 @@ datalist {
     position: absolute;
     right: 5%;
     top: 0;
+}
+
+#blackShirt, #burgundyShirt, #hat, #whiteShirt, #CD, #vinyl, #cymbal, #poster1, #poster2, #poster3, #augShow, #julyShow {
+    height: auto;
 }
 /* For Desktop */
 

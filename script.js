@@ -754,14 +754,15 @@ $(document).ready(() => {
         }
     });
     $("body").on("click", "#checkoutbtn", (e) => {
-        $("#mainpagehide").hide();
-        $(".hidecheckout").removeClass().addClass("checkout-page");
+        $("#mainpagehide").toggle();
+        $(".hidecheckout").addClass("checkout-page");
     });
-    $("body").on("click", ".contShop", (e) => {
-        $("#mainpagehide").show();
+    $("body").on("click", "#contShop", (e) => {
+        $("#mainpagehide").toggle();
         $(".hidecheckout").hide();
-        $(".checkout-page").hide();
+        $(".checkout-page").toggle();
         $("#hideCart").toggle();
+        $(".hidecheckout").removeClass("checkout-page");
     });
 
     // Add Item to checkout from Cart
@@ -1106,4 +1107,3 @@ $(document).ready(() => {
         $("#cartsubtotal").text(`$${cartSubint - $("#vinylPrice").val()}`);
     });
 });
-
