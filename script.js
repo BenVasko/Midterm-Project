@@ -89,6 +89,8 @@ $(document).ready(() => {
         tix2Total = 0;
     }
 
+    // let cartSub = ($("#cartsubtotal").text());
+    // let cartSubint = cartSub.slice(1);
 
     total();
     $("#apparelcarousel").show();
@@ -761,8 +763,8 @@ $(document).ready(() => {
         $(".checkout-page").hide();
         $("#hideCart").toggle();
     });
-    // Start Checkout Items
-    // Add CD
+
+    // Add Item to checkout from Cart
     $("body").on("click", "#compactDisc", (e) => {
         $(".columnscheckout").append(`<section class="items">
         <section class="itemName">${$(".nameCD").text()}</section>
@@ -775,8 +777,6 @@ $(document).ready(() => {
             
     </section>`);
     });
-    // End Add CD
-    // Add Vinyl
     $("body").on("click", "#vinylRecord", (e) => {
         $(".columnscheckout").append(`<section class="items">
         <section class="itemName">${$(".nameVinyl").text()}</section>
@@ -788,8 +788,6 @@ $(document).ready(() => {
             </button>            
     </section>`);
     });
-    // End Add Vinyl
-    // Add Burgundy Shirt
     $("body").on("click", "#burShirt", (e) => {
         $(".columnscheckout").append(`<section class="items">
         <section class="itemName">${$(".nameBurShirt").text()}</section>
@@ -801,8 +799,6 @@ $(document).ready(() => {
             </button>            
         </section>`);
     });
-    // End Add Burgundy Shirt
-    // Add Black Shirt
     $("body").on("click", "#blkShirt", (e) => {
         $(".columnscheckout").append(`<section cless="delContainer">
         <section class="items">
@@ -816,8 +812,6 @@ $(document).ready(() => {
             </section>            
         </section>`);
     });
-    // End Add Black Shirt
-    // Add White Shirt
     $("body").on("click", "#whtShirt", (e) => {
         $(".columnscheckout").append(`<section class="items">
             <section class="itemName">${$(".nameWhiteShirt").text()}</section>
@@ -829,8 +823,6 @@ $(document).ready(() => {
                 </button>
         </section>`);
     });
-    // End Add White Shirt
-    // Add Dad Hat
     $("body").on("click", "#dadHat", (e) => {
         $(".columnscheckout").append(`<section class="items">
             <section class="itemName">${$(".nameHat").text()}</section>
@@ -842,8 +834,6 @@ $(document).ready(() => {
                 </button>
                 </section>`);
     });
-    // End Add Dad Hat
-    // Add Cymbal
     $("body").on("click", "#usedCymbal", (e) => {
         $(".columnscheckout").append(`<section class="items">
                 <section class="itemName">${$(".nameCymbal").text()}</section>
@@ -855,8 +845,6 @@ $(document).ready(() => {
                     </button>                    
             </section>`);
     });
-    // End Add Cymbal
-    // Add Poster 1
     $("body").on("click", "#p1", (e) => {
         $(".columnscheckout").append(`<section class="items">
                 <section class="itemName">${$(".nameP1").text()}</section>
@@ -868,8 +856,6 @@ $(document).ready(() => {
                     </button>
                 </section>`);
     });
-    // End Add Poster 1
-    // Add Poster 2
     $("body").on("click", "#p2", (e) => {
         $(".columnscheckout").append(`<section class="items">
                 <section class="itemName">${$(".nameP2").text()}</section>
@@ -881,8 +867,6 @@ $(document).ready(() => {
                     </button>
                 </section>`);
     });
-    // End Add Poster 2
-    // Add Poster 3
     $("body").on("click", "#p3", (e) => {
         $(".columnscheckout").append(`<section class="items">
                         <section class="itemName">${$(".nameP3").text()}</section>
@@ -894,8 +878,6 @@ $(document).ready(() => {
                             </button>
                        </section>`);
     });
-    // End Add Poster 3
-    // Add Tix 1
     $("body").on("click", "#tickets1", (e) => {
         $(".columnscheckout").append(`<section class="items">
                             <section class="itemName">${$(".nameTix1").text()}</section>
@@ -907,8 +889,6 @@ $(document).ready(() => {
                                 </button>
                         </section>`);
     });
-    // End Add Tix 1
-    // Add Tix 2
     $("body").on("click", "#tickets2", (e) => {
         $(".columnscheckout").append(`<section class="items">
                         <section class="itemName">${$(".nameTix2").text()}</section>
@@ -921,6 +901,7 @@ $(document).ready(() => {
                     </section>`);
     });
     // End Checkout Items
+
     // Start Receipt Items
     // Add CD
     $("body").on("click", "#compactDisc", (e) => {
@@ -1063,6 +1044,66 @@ $(document).ready(() => {
         $(".changeDue").text(null);
         $(".changeDue").append(`$${($(".cashInput").val() - pmtTotal)}`);
     });
-
+    //Adjusting Subtotal in cart when removing items
+    $("body").on("click", ".burClear", (e) => {
+        let cartSub = ($("#cartsubtotal").text());
+        let cartSubint = cartSub.slice(1);
+        $("#cartsubtotal").text(`$${cartSubint - $("#burShirtPrice").val()}`);
+    });
+    $("body").on("click", ".blkClear", (e) => {
+        let cartSub = ($("#cartsubtotal").text());
+        let cartSubint = cartSub.slice(1);
+        $("#cartsubtotal").text(`$${cartSubint - $("#blkShirtPrice").val()}`);
+    });
+    $("body").on("click", ".whtClear", (e) => {
+        let cartSub = ($("#cartsubtotal").text());
+        let cartSubint = cartSub.slice(1);
+        $("#cartsubtotal").text(`$${cartSubint - $("#whiteShirtPrice").val()}`);
+    });
+    $("body").on("click", ".hatClear", (e) => {
+        let cartSub = ($("#cartsubtotal").text());
+        let cartSubint = cartSub.slice(1);
+        $("#cartsubtotal").text(`$${cartSubint - $("#hatPrice").val()}`);
+    });
+    $("body").on("click", ".cymClear", (e) => {
+        let cartSub = ($("#cartsubtotal").text());
+        let cartSubint = cartSub.slice(1);
+        $("#cartsubtotal").text(`$${cartSubint - $("#cymbalPrice").val()}`);
+    });
+    $("body").on("click", ".p1Clear", (e) => {
+        let cartSub = ($("#cartsubtotal").text());
+        let cartSubint = cartSub.slice(1);
+        $("#cartsubtotal").text(`$${cartSubint - $("#p1Price").val()}`);
+    });
+    $("body").on("click", ".p2Clear", (e) => {
+        let cartSub = ($("#cartsubtotal").text());
+        let cartSubint = cartSub.slice(1);
+        $("#cartsubtotal").text(`$${cartSubint - $("#p2Price").val()}`);
+    });
+    $("body").on("click", ".p3Clear", (e) => {
+        let cartSub = ($("#cartsubtotal").text());
+        let cartSubint = cartSub.slice(1);
+        $("#cartsubtotal").text(`$${cartSubint - $("#p3Price").val()}`);
+    });
+    $("body").on("click", ".tix1Clear", (e) => {
+        let cartSub = ($("#cartsubtotal").text());
+        let cartSubint = cartSub.slice(1);
+        $("#cartsubtotal").text(`$${cartSubint - $("#tix1Price").val()}`);
+    });
+    $("body").on("click", ".tix2Clear", (e) => {
+        let cartSub = ($("#cartsubtotal").text());
+        let cartSubint = cartSub.slice(1);
+        $("#cartsubtotal").text(`$${cartSubint - $("#tix2Price").val()}`);
+    });
+    $("body").on("click", ".cdClear", (e) => {
+        let cartSub = ($("#cartsubtotal").text());
+        let cartSubint = cartSub.slice(1);
+        $("#cartsubtotal").text(`$${cartSubint - $("#cdPrice").val()}`);
+    });
+    $("body").on("click", ".vinClear", (e) => {
+        let cartSub = ($("#cartsubtotal").text());
+        let cartSubint = cartSub.slice(1);
+        $("#cartsubtotal").text(`$${cartSubint - $("#vinylPrice").val()}`);
+    });
 });
 
