@@ -1038,62 +1038,72 @@ $(document).ready(() => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
         $("#cartsubtotal").text(`$${cartSubint - burShirtTotal}`);
+        $(".subtotal").text(`$${cartSubint - burShirtTotal}`);
     });
     $("body").on("click", ".blkClear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
         $("#cartsubtotal").text(`$${cartSubint - blkShirtTotal}`);
+        $(".subtotal").text(`$${cartSubint - blkShirtTotal}`);
     });
     $("body").on("click", ".whtClear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
         $("#cartsubtotal").text(`$${cartSubint - whiteShirtTotal}`);
+        $(".subtotal").text(`$${cartSubint - whiteShirtTotal}`);
     });
     $("body").on("click", ".hatClear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
         $("#cartsubtotal").text(`$${cartSubint - hatTotal}`);
+        $(".subtotal").text(`$${cartSubint - hatTotal}`);
     });
     $("body").on("click", ".cymClear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
         $("#cartsubtotal").text(`$${cartSubint - cymTotal}`);
+        $(".subtotal").text(`$${cartSubint - cymTotal}`);
     });
     $("body").on("click", ".p1Clear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
         $("#cartsubtotal").text(`$${cartSubint - post1Total}`);
+        $(".subtotal").text(`$${cartSubint - post1Total}`);
     });
     $("body").on("click", ".p2Clear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
         $("#cartsubtotal").text(`$${cartSubint - post2Total}`);
+        $(".subtotal").text(`$${cartSubint - post2Total}`);
     });
     $("body").on("click", ".p3Clear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
         $("#cartsubtotal").text(`$${cartSubint - post3Total}`);
+        $(".subtotal").text(`$${cartSubint - post3Total}`);
     });
     $("body").on("click", ".tix1Clear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
         $("#cartsubtotal").text(`$${cartSubint - tix1Total}`);
+        $(".subtotal").text(`$${cartSubint - tix1Total}`);
     });
     $("body").on("click", ".tix2Clear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
         $("#cartsubtotal").text(`$${cartSubint - tix2Total}`);
+        $(".subtotal").text(`$${cartSubint - tix2Total}`);
     });
     $("body").on("click", ".cdClear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
         $("#cartsubtotal").text(`$${cartSubint - cdTotal}`);
+        $(".subtotal").text(`$${cartSubint - cdTotal}`);
     });
     $("body").on("click", ".vinClear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
         $("#cartsubtotal").text(`$${cartSubint - vinylTotal}`);
+        $(".subtotal").text(`$${cartSubint - vinylTotal}`);
     });
 });
-
-whiteShirtTotal = 0;
