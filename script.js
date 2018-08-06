@@ -17,19 +17,22 @@ $(document).ready(() => {
         $(".total").text(null);
         $(".total").append(`$${cdTotal + vinylTotal + burShirtTotal + blkShirtTotal + whiteShirtTotal + post1Total + post2Total + post3Total + cymTotal + hatTotal + tix1Total + tix2Total}`)
         $(".subtotal").text(null);
-        $(".subtotal").append(`$${cdTotal + vinylTotal + burShirtTotal + blkShirtTotal + whiteShirtTotal + post1Total + post2Total + post3Total + cymTotal + hatTotal + tix1Total + tix2Total}`)
+        let subtotalVar = cdTotal + vinylTotal + burShirtTotal + blkShirtTotal + whiteShirtTotal + post1Total + post2Total + post3Total + cymTotal + hatTotal + tix1Total + tix2Total
+        $(".subtotal").append(`$${subtotalVar.toFixed(2)}`)
         $(".tax").text(null);
-        $(".tax").append(`$${cdTotal * .06 + vinylTotal * .06 + blkShirtTotal * .06 + burShirtTotal * .06 + whiteShirtTotal * .06 + post1Total * .06 + post2Total * .06 + post3Total * .06 + cymTotal * .06 + hatTotal * .06 + tix1Total * .06 + tix2Total * .06}`);
+        let taxVar = cdTotal * .06 + vinylTotal * .06 + blkShirtTotal * .06 + burShirtTotal * .06 + whiteShirtTotal * .06 + post1Total * .06 + post2Total * .06 + post3Total * .06 + cymTotal * .06 + hatTotal * .06 + tix1Total * .06 + tix2Total * .06
+        $(".tax").append(`$${taxVar.toFixed(2)}`);
         $(".taxTotal").text(null);
-        $(".taxTotal").append(`$${cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06}`);
+        let taxTotalVar = cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06
+        $(".taxTotal").append(`$${taxTotalVar.toFixed(2)}`);
         $(".receiptSubtotal").text(null);
-        $(".receiptSubtotal").append(`Subtotal: $${cdTotal + vinylTotal + burShirtTotal + blkShirtTotal + whiteShirtTotal + post1Total + post2Total + post3Total + cymTotal + hatTotal + tix1Total + tix2Total}`)
+        $(".receiptSubtotal").append(`Subtotal: $${subtotalVar.toFixed(2)}`)
         $(".receiptTax").text(null);
-        $(".receiptTax").append(`Sales Tax (6%): $${cdTotal * .06 + vinylTotal * .06 + blkShirtTotal * .06 + burShirtTotal * .06 + whiteShirtTotal * .06 + post1Total * .06 + post2Total * .06 + post3Total * .06 + cymTotal * .06 + hatTotal * .06 + tix1Total * .06 + tix2Total * .06}`);
+        $(".receiptTax").append(`Sales Tax (6%): $${taxVar.toFixed(2)}`);
         $(".receiptTaxTotal").text(null);
-        $(".receiptTaxTotal").append(`Total: $${cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06}`);
+        $(".receiptTaxTotal").append(`Total: $${taxTotalVar.toFixed(2)}`);
         $(".amtDue").text(null);
-        $(".amtDue").append(`Total: $${cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06}`);
+        $(".amtDue").append(`Total: $${taxTotalVar.toFixed(2)}`);
     };
 
     let update = () => {
@@ -89,28 +92,11 @@ $(document).ready(() => {
         tix2Total = 0;
     }
 
-    // let cartSub = ($("#cartsubtotal").text());
-    // let cartSubint = cartSub.slice(1);
-
     total();
     $("#apparelcarousel").show();
     $("#musiccarousel").hide();
     $("#collectiblescarousel").hide();
     $("#ticketscarousel").hide();
-
-    // $(".added").hide();
-
-    //     const hideItemPopups = () => {
-    //         $(".product-popup").toggle();
-    //     }
-
-    //     const hideCart = () => {
-    //         $(".slideOutCartParent").toggle();
-    //     }
-    //     hideCart();
-
-
-
 
     // Toggle Popups
     // Vinyl
@@ -207,9 +193,8 @@ $(document).ready(() => {
     });
     // End Cart Popout
 
-    // Adrean: toggle button class and make carousel items match button
-
-    $(".button").click((e) => {
+    // Carousel Toggle Buttons
+       $(".button").click((e) => {
         $(".button").removeClass("carousel-active");
         $(".button").addClass("carousel-inactive");
         $(e.target).removeClass("carousel-inactive").addClass("carousel-active");
@@ -240,6 +225,7 @@ $(document).ready(() => {
                 break;
         }
     });
+    // End Carousel Toggle Buttons
 
     // Add Items to Cart
     // Add Vinyl
@@ -1024,6 +1010,7 @@ $(document).ready(() => {
             </section>`);
     });
     // End Checkout Items
+    // Start Cash/Credit Fields
     $("body").on("click", ".cash", (e) => {
         $(".cash-form").show();
     });
@@ -1042,8 +1029,10 @@ $(document).ready(() => {
     $("body").on("click", ".pmtBtn", (e) => {
         let pmtTotal = cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06
         $(".changeDue").text(null);
-        $(".changeDue").append(`$${($(".cashInput").val() - pmtTotal)}`);
+        let change = (($(".cashInput").val() - pmtTotal)).toFixed(2)
+        $(".changeDue").append(`$${change}`);
     });
+    // End Cash/Credit Fields
     //Adjusting Subtotal in cart when removing items
     $("body").on("click", ".burClear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
