@@ -12,6 +12,7 @@ $(document).ready(() => {
     let hatTotal = null;
     let tix1Total = null;
     let tix2Total = null;
+    let taxVar = null;
 
     let total = () => {
         $(".total").text(null);
@@ -891,7 +892,7 @@ $(document).ready(() => {
     // Start Receipt Items
     // Add CD
     $("body").on("click", "#compactDisc", (e) => {
-        $(".receiptcheckout").append(`<section class="items">
+        $(".receiptcheckout").append(`<section class="items" id="delCd">
         <section class="itemName">${$(".nameCD").text()}</section>
         <section class="itemQuantity">${$(".cdQtyCart").val()}</section>
             <section class="itemPrice"> @ $${($("#cdPrice").val())} each</section>
@@ -901,7 +902,7 @@ $(document).ready(() => {
     // End Add CD
     // Add Vinyl
     $("body").on("click", "#vinylRecord", (e) => {
-        $(".receiptcheckout").append(`<section class="items">
+        $(".receiptcheckout").append(`<section class="items" id="delVinyl">
         <section class="itemName">${$(".nameVinyl").text()}</section>
         <section class="itemQuantity">${$(".vinylQtyCart").val()}</section>
             <section class="itemPrice"> @ $${($("#vinylPrice").val())} each</section>
@@ -911,7 +912,7 @@ $(document).ready(() => {
     // End Add Vinyl
     // Add Burgundy Shirt
     $("body").on("click", "#burShirt", (e) => {
-        $(".receiptcheckout").append(`<section class="items">
+        $(".receiptcheckout").append(`<section class="items" id="delBur">
         <section class="itemName">${$(".nameBurShirt").text()}</section>
         <section class="itemQuantity">${$(".burShirtQtyCart").val()}</section>
             <section class="itemPrice"> @$${($("#burShirtPrice").val())} each</section>
@@ -921,8 +922,8 @@ $(document).ready(() => {
     // End Add Burgundy Shirt
     // Add Black Shirt
     $("body").on("click", "#blkShirt", (e) => {
-        $(".receiptcheckout").append(`<section cless="delContainer">
-        <section class="items">
+        $(".receiptcheckout").append(`
+        <section class="items" id="delBlk">
             <section class="itemName">${$(".nameBlkShirt").text()}</section>
             <section class="itemQuantity">${$(".blkShirtQtyCart").val()}</section>
                 <section class="itemPrice"> @ $${($("#blkShirtPrice").val())} each</section>
@@ -932,7 +933,7 @@ $(document).ready(() => {
     // End Add Black Shirt
     // Add White Shirt
     $("body").on("click", "#whtShirt", (e) => {
-        $(".receiptcheckout").append(`<section class="items">
+        $(".receiptcheckout").append(`<section class="items" id="delWht">
             <section class="itemName">${$(".nameWhiteShirt").text()}</section>
             <section class="itemQuantity">${$(".whiteShirtQtyCart").val()}</section>
                 <section class="itemPrice"> @ $${($("#whiteShirtPrice").val())} each</section>
@@ -942,7 +943,7 @@ $(document).ready(() => {
     // End Add White Shirt
     // Add Dad Hat
     $("body").on("click", "#dadHat", (e) => {
-        $(".receiptcheckout").append(`<section class="items">
+        $(".receiptcheckout").append(`<section class="items" id="delHat">
             <section class="itemName">${$(".nameHat").text()}</section>
             <section class="itemQuantity">${$(".hatQtyCart").val()}</section>
                 <section class="itemPrice"> @ $${($("#hatPrice").val())} each</section>
@@ -952,7 +953,7 @@ $(document).ready(() => {
     // End Add Dad Hat
     // Add Cymbal
     $("body").on("click", "#usedCymbal", (e) => {
-        $(".receiptcheckout").append(`<section class="items">
+        $(".receiptcheckout").append(`<section class="items" id="delCym">
                 <section class="itemName">${$(".nameCymbal").text()}</section>
                 <section class="itemQuantity">${$(".cymQtyCart").val()}</section>
                     <section class="itemPrice"> @ $${($("#cymbalPrice").val())} each</section>
@@ -962,7 +963,7 @@ $(document).ready(() => {
     // End Add Cymbal
     // Add Poster 1
     $("body").on("click", "#p1", (e) => {
-        $(".receiptcheckout").append(`<section class="items">
+        $(".receiptcheckout").append(`<section class="items" id="delP1">
                 <section class="itemName">${$(".nameP1").text()}</section>
                 <section class="itemQuantity">${$(".post1QtyCart").val()}</section>
                     <section class="itemPrice"> @ $${($("#p1Price").val())} each</section>
@@ -972,7 +973,7 @@ $(document).ready(() => {
     // End Add Poster 1
     // Add Poster 2
     $("body").on("click", "#p2", (e) => {
-        $(".receiptcheckout").append(`<section class="items">
+        $(".receiptcheckout").append(`<section class="items" id="delP2">
                 <section class="itemName">${$(".nameP2").text()}</section>
                 <section class="itemQuantity">${$(".post2QtyCart").val()}</section>
                     <section class="itemPrice"> @ $${($("#p2Price").val())} each</section>
@@ -982,7 +983,7 @@ $(document).ready(() => {
     // End Add Poster 2
     // Add Poster 3
     $("body").on("click", "#p3", (e) => {
-        $(".receiptcheckout").append(`<section class="items">
+        $(".receiptcheckout").append(`<section class="items" id="delP3">
                         <section class="itemName">${$(".nameP3").text()}</section>
                         <section class="itemQuantity">${$(".post3QtyCart").val()}</section>
                             <section class="itemPrice"> @ $${($("#p3Price").val())} each</section>
@@ -992,7 +993,7 @@ $(document).ready(() => {
     // End Add Poster 3
     // Add Tix 1
     $("body").on("click", "#tickets1", (e) => {
-        $(".receiptcheckout").append(`<section class="items">
+        $(".receiptcheckout").append(`<section class="items" id="delTix1">
                             <section class="itemName">${$(".nameTix1").text()}</section>
                             <section class="itemQuantity">${$(".tix1QtyCart").val()}</section>
                                 <section class="itemPrice"> @ $${($("#tix1Price").val())} each</section>
@@ -1002,7 +1003,7 @@ $(document).ready(() => {
     // End Add Tix 1
     // Add Tix 2
     $("body").on("click", "#tickets2", (e) => {
-        $(".receiptcheckout").append(`<section class="items">
+        $(".receiptcheckout").append(`<section class="items" id="delTix2">
                         <section class="itemName">${$(".nameTix2").text()}</section>
                         <section class="itemQuantity">${$(".tix2QtyCart").val()}</section>
                             <section class="itemPrice"> @ $${($("#tix2Price").val())} each</section>
@@ -1037,73 +1038,230 @@ $(document).ready(() => {
     $("body").on("click", ".burClear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
+        let taxVar = cdTotal * .06 + vinylTotal * .06 + blkShirtTotal * .06 + burShirtTotal * .06 + whiteShirtTotal * .06 + post1Total * .06 + post2Total * .06 + post3Total * .06 + cymTotal * .06 + hatTotal * .06 + tix1Total * .06 + tix2Total * .06;
+        let taxTotalVar = cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06
         $("#cartsubtotal").text(`$${cartSubint - burShirtTotal}`);
         $(".subtotal").text(`$${cartSubint - burShirtTotal}`);
+        $(".receiptSubtotal").text(`$${cartSubint - burShirtTotal}`);
+        $("#delBur").remove();
+        let newtax = (taxVar - (burShirtTotal * 0.06 ));
+        $(".tax").text(newtax.toFixed(2));
+        $(".receiptTax").text(newtax.toFixed(2));
+        let newTaxTotal = (taxTotalVar - (burShirtTotal * 1.06 ));
+        $(".taxTotal").text(newTaxTotal.toFixed(2));
+        $(".receiptTaxTotal").text(newTaxTotal.toFixed(2));
+        $(".amtDue").text(newTaxTotal.toFixed(2));
+        let newChange = ($(".cashInput").val() - newTaxTotal).toFixed(2)
+        $(".changeDue").text(`$${newChange}`);
     });
     $("body").on("click", ".blkClear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
+        let taxVar = cdTotal * .06 + vinylTotal * .06 + blkShirtTotal * .06 + burShirtTotal * .06 + whiteShirtTotal * .06 + post1Total * .06 + post2Total * .06 + post3Total * .06 + cymTotal * .06 + hatTotal * .06 + tix1Total * .06 + tix2Total * .06;
+        let taxTotalVar = cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06
         $("#cartsubtotal").text(`$${cartSubint - blkShirtTotal}`);
         $(".subtotal").text(`$${cartSubint - blkShirtTotal}`);
+        $(".receiptSubtotal").text(`$${cartSubint - blkShirtTotal}`);
+        $("#delBlk").remove();
+        let newtax = (taxVar - (blkShirtTotal * 0.06 ));
+        $(".tax").text(newtax.toFixed(2));
+        $(".receiptTax").text(newtax.toFixed(2));
+        let newTaxTotal = (taxTotalVar - (blkShirtTotal * 1.06 ));
+        $(".taxTotal").text(newTaxTotal.toFixed(2));
+        $(".receiptTaxTotal").text(newTaxTotal.toFixed(2));
+        $(".amtDue").text(newTaxTotal.toFixed(2));
+        let newChange = ($(".cashInput").val() - newTaxTotal).toFixed(2)
+        $(".changeDue").text(`$${newChange}`);
     });
     $("body").on("click", ".whtClear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
+        let taxVar = cdTotal * .06 + vinylTotal * .06 + blkShirtTotal * .06 + burShirtTotal * .06 + whiteShirtTotal * .06 + post1Total * .06 + post2Total * .06 + post3Total * .06 + cymTotal * .06 + hatTotal * .06 + tix1Total * .06 + tix2Total * .06;
+        let taxTotalVar = cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06
         $("#cartsubtotal").text(`$${cartSubint - whiteShirtTotal}`);
         $(".subtotal").text(`$${cartSubint - whiteShirtTotal}`);
+        $(".receiptSubtotal").text(`$${cartSubint - whiteShirtTotal}`);
+        $("#delWht").remove();
+        let newtax = (taxVar - (whiteShirtTotal * 0.06 ));
+        $(".tax").text(newtax.toFixed(2));
+        $(".receiptTax").text(newtax.toFixed(2));
+        let newTaxTotal = (taxTotalVar - (whiteShirtTotal * 1.06 ));
+        $(".taxTotal").text(newTaxTotal.toFixed(2));
+        $(".receiptTaxTotal").text(newTaxTotal.toFixed(2));
+        $(".amtDue").text(newTaxTotal.toFixed(2));
+        let newChange = ($(".cashInput").val() - newTaxTotal).toFixed(2)
+        $(".changeDue").text(`$${newChange}`);
     });
     $("body").on("click", ".hatClear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
+        let taxVar = cdTotal * .06 + vinylTotal * .06 + blkShirtTotal * .06 + burShirtTotal * .06 + whiteShirtTotal * .06 + post1Total * .06 + post2Total * .06 + post3Total * .06 + cymTotal * .06 + hatTotal * .06 + tix1Total * .06 + tix2Total * .06;
+        let taxTotalVar = cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06
         $("#cartsubtotal").text(`$${cartSubint - hatTotal}`);
         $(".subtotal").text(`$${cartSubint - hatTotal}`);
+        $(".receiptSubtotal").text(`$${cartSubint - hatTotal}`);
+        $("#delHat").remove();
+        let newtax = (taxVar - (hatTotal * 0.06 ));
+        $(".tax").text(newtax.toFixed(2));
+        $(".receiptTax").text(newtax.toFixed(2));
+        let newTaxTotal = (taxTotalVar - (hatTotal * 1.06 ));
+        $(".taxTotal").text(newTaxTotal.toFixed(2));
+        $(".receiptTaxTotal").text(newTaxTotal.toFixed(2));
+        $(".amtDue").text(newTaxTotal.toFixed(2));
+        let newChange = ($(".cashInput").val() - newTaxTotal).toFixed(2)
+        $(".changeDue").text(`$${newChange}`);
     });
     $("body").on("click", ".cymClear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
+        let taxVar = cdTotal * .06 + vinylTotal * .06 + blkShirtTotal * .06 + burShirtTotal * .06 + whiteShirtTotal * .06 + post1Total * .06 + post2Total * .06 + post3Total * .06 + cymTotal * .06 + hatTotal * .06 + tix1Total * .06 + tix2Total * .06;
+        let taxTotalVar = cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06
         $("#cartsubtotal").text(`$${cartSubint - cymTotal}`);
         $(".subtotal").text(`$${cartSubint - cymTotal}`);
+        $(".receiptSubtotal").text(`$${cartSubint - cymTotal}`);
+        $("#delCym").remove();
+        let newtax = (taxVar - (cymTotal * 0.06 ));
+        $(".tax").text(newtax.toFixed(2));
+        $(".receiptTax").text(newtax.toFixed(2));
+        let newTaxTotal = (taxTotalVar - (cymTotal * 1.06 ));
+        $(".taxTotal").text(newTaxTotal.toFixed(2));
+        $(".receiptTaxTotal").text(newTaxTotal.toFixed(2));
+        $(".amtDue").text(newTaxTotal.toFixed(2));
+        let newChange = ($(".cashInput").val() - newTaxTotal).toFixed(2)
+        $(".changeDue").text(`$${newChange}`);
     });
     $("body").on("click", ".p1Clear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
+        let taxVar = cdTotal * .06 + vinylTotal * .06 + blkShirtTotal * .06 + burShirtTotal * .06 + whiteShirtTotal * .06 + post1Total * .06 + post2Total * .06 + post3Total * .06 + cymTotal * .06 + hatTotal * .06 + tix1Total * .06 + tix2Total * .06;
+        let taxTotalVar = cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06
         $("#cartsubtotal").text(`$${cartSubint - post1Total}`);
         $(".subtotal").text(`$${cartSubint - post1Total}`);
+        $(".receiptSubtotal").text(`$${cartSubint - post1Total}`);
+        $("#delP1").remove();
+        let newtax = (taxVar - (post1Total * 0.06 ));
+        $(".tax").text(newtax.toFixed(2));
+        $(".receiptTax").text(newtax.toFixed(2));
+        let newTaxTotal = (taxTotalVar - (post1Total * 1.06 ));
+        $(".taxTotal").text(newTaxTotal.toFixed(2));
+        $(".receiptTaxTotal").text(newTaxTotal.toFixed(2));
+        $(".amtDue").text(newTaxTotal.toFixed(2));
+        let newChange = ($(".cashInput").val() - newTaxTotal).toFixed(2)
+        $(".changeDue").text(`$${newChange}`);
     });
     $("body").on("click", ".p2Clear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
+        let taxVar = cdTotal * .06 + vinylTotal * .06 + blkShirtTotal * .06 + burShirtTotal * .06 + whiteShirtTotal * .06 + post1Total * .06 + post2Total * .06 + post3Total * .06 + cymTotal * .06 + hatTotal * .06 + tix1Total * .06 + tix2Total * .06;
+        let taxTotalVar = cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06
         $("#cartsubtotal").text(`$${cartSubint - post2Total}`);
         $(".subtotal").text(`$${cartSubint - post2Total}`);
+        $(".receiptSubtotal").text(`$${cartSubint - post2Total}`);
+        $("#delP2").remove();
+        let newtax = (taxVar - (post2Total * 0.06 ));
+        $(".tax").text(newtax.toFixed(2));
+        $(".receiptTax").text(newtax.toFixed(2));
+        let newTaxTotal = (taxTotalVar - (post2Total * 1.06 ));
+        $(".taxTotal").text(newTaxTotal.toFixed(2));
+        $(".receiptTaxTotal").text(newTaxTotal.toFixed(2));
+        $(".amtDue").text(newTaxTotal.toFixed(2));
+        let newChange = ($(".cashInput").val() - newTaxTotal).toFixed(2)
+        $(".changeDue").text(`$${newChange}`);
     });
     $("body").on("click", ".p3Clear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
+        let taxVar = cdTotal * .06 + vinylTotal * .06 + blkShirtTotal * .06 + burShirtTotal * .06 + whiteShirtTotal * .06 + post1Total * .06 + post2Total * .06 + post3Total * .06 + cymTotal * .06 + hatTotal * .06 + tix1Total * .06 + tix2Total * .06;
+        let taxTotalVar = cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06
         $("#cartsubtotal").text(`$${cartSubint - post3Total}`);
         $(".subtotal").text(`$${cartSubint - post3Total}`);
+        $(".receiptSubtotal").text(`$${cartSubint - post3Total}`);
+        $("#delP3").remove();
+        let newtax = (taxVar - (post3Total * 0.06 ));
+        $(".tax").text(newtax.toFixed(2));
+        $(".receiptTax").text(newtax.toFixed(2));
+        let newTaxTotal = (taxTotalVar - (post3Total * 1.06 ));
+        $(".taxTotal").text(newTaxTotal.toFixed(2));
+        $(".receiptTaxTotal").text(newTaxTotal.toFixed(2));
+        $(".amtDue").text(newTaxTotal.toFixed(2));
+        let newChange = ($(".cashInput").val() - newTaxTotal).toFixed(2)
+        $(".changeDue").text(`$${newChange}`);
     });
     $("body").on("click", ".tix1Clear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
+        let taxVar = cdTotal * .06 + vinylTotal * .06 + blkShirtTotal * .06 + burShirtTotal * .06 + whiteShirtTotal * .06 + post1Total * .06 + post2Total * .06 + post3Total * .06 + cymTotal * .06 + hatTotal * .06 + tix1Total * .06 + tix2Total * .06;
+        let taxTotalVar = cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06
         $("#cartsubtotal").text(`$${cartSubint - tix1Total}`);
         $(".subtotal").text(`$${cartSubint - tix1Total}`);
+        $(".receiptSubtotal").text(`$${cartSubint - tix1Total}`);
+        $("#delTix1").remove();
+        let newtax = (taxVar - (tix1Total * 0.06 ));
+        $(".tax").text(newtax.toFixed(2));
+        $(".receiptTax").text(newtax.toFixed(2));
+        let newTaxTotal = (taxTotalVar - (tix1Total * 1.06 ));
+        $(".taxTotal").text(newTaxTotal.toFixed(2));
+        $(".receiptTaxTotal").text(newTaxTotal.toFixed(2));
+        $(".amtDue").text(newTaxTotal.toFixed(2));
+        let newChange = ($(".cashInput").val() - newTaxTotal).toFixed(2)
+        $(".changeDue").text(`$${newChange}`);
     });
     $("body").on("click", ".tix2Clear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
+        let taxVar = cdTotal * .06 + vinylTotal * .06 + blkShirtTotal * .06 + burShirtTotal * .06 + whiteShirtTotal * .06 + post1Total * .06 + post2Total * .06 + post3Total * .06 + cymTotal * .06 + hatTotal * .06 + tix1Total * .06 + tix2Total * .06;
+        let taxTotalVar = cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06
         $("#cartsubtotal").text(`$${cartSubint - tix2Total}`);
         $(".subtotal").text(`$${cartSubint - tix2Total}`);
+        $(".receiptSubtotal").text(`$${cartSubint - tix2Total}`);
+        $("#delTix2").remove();
+        let newtax = (taxVar - (tix2Total * 0.06 ));
+        $(".tax").text(newtax.toFixed(2));
+        $(".receiptTax").text(newtax.toFixed(2));
+        let newTaxTotal = (taxTotalVar - (tix2Total * 1.06 ));
+        $(".taxTotal").text(newTaxTotal.toFixed(2));
+        $(".receiptTaxTotal").text(newTaxTotal.toFixed(2));
+        $(".amtDue").text(newTaxTotal.toFixed(2));
+        let newChange = ($(".cashInput").val() - newTaxTotal).toFixed(2)
+        $(".changeDue").text(`$${newChange}`);
     });
     $("body").on("click", ".cdClear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
+        let taxVar = cdTotal * .06 + vinylTotal * .06 + blkShirtTotal * .06 + burShirtTotal * .06 + whiteShirtTotal * .06 + post1Total * .06 + post2Total * .06 + post3Total * .06 + cymTotal * .06 + hatTotal * .06 + tix1Total * .06 + tix2Total * .06;
+        let taxTotalVar = cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06
         $("#cartsubtotal").text(`$${cartSubint - cdTotal}`);
         $(".subtotal").text(`$${cartSubint - cdTotal}`);
+        $(".receiptSubtotal").text(`$${cartSubint - cdTotal}`);
+        $("#delCd").remove();
+        let newtax = (taxVar - (cdTotal * 0.06 ));
+        $(".tax").text(newtax.toFixed(2));
+        $(".receiptTax").text(newtax.toFixed(2));
+        let newTaxTotal = (taxTotalVar - (cdTotal * 1.06 ));
+        $(".taxTotal").text(newTaxTotal.toFixed(2));
+        $(".receiptTaxTotal").text(newTaxTotal.toFixed(2));
+        $(".amtDue").text(newTaxTotal.toFixed(2));
+        let newChange = ($(".cashInput").val() - newTaxTotal).toFixed(2)
+        $(".changeDue").text(`$${newChange}`);
+        
     });
     $("body").on("click", ".vinClear", (e) => {
         let cartSub = ($("#cartsubtotal").text());
         let cartSubint = cartSub.slice(1);
+        let taxVar = cdTotal * .06 + vinylTotal * .06 + blkShirtTotal * .06 + burShirtTotal * .06 + whiteShirtTotal * .06 + post1Total * .06 + post2Total * .06 + post3Total * .06 + cymTotal * .06 + hatTotal * .06 + tix1Total * .06 + tix2Total * .06;
+        let taxTotalVar = cdTotal * 1.06 + vinylTotal * 1.06 + blkShirtTotal * 1.06 + burShirtTotal * 1.06 + whiteShirtTotal * 1.06 + post1Total * 1.06 + post2Total * 1.06 + post3Total * 1.06 + cymTotal * 1.06 + hatTotal * 1.06 + tix1Total * 1.06 + tix2Total * 1.06
         $("#cartsubtotal").text(`$${cartSubint - vinylTotal}`);
         $(".subtotal").text(`$${cartSubint - vinylTotal}`);
+        $(".receiptSubtotal").text(`$${cartSubint - vinylTotal}`);
+        $("#delVinyl").remove();
+        let newtax = (taxVar - (vinylTotal * 0.06 ));
+        $(".tax").text(newtax.toFixed(2));
+        $(".receiptTax").text(newtax.toFixed(2));
+        let newTaxTotal = (taxTotalVar - (vinylTotal * 1.06 ));
+        $(".taxTotal").text(newTaxTotal.toFixed(2));
+        $(".receiptTaxTotal").text(newTaxTotal.toFixed(2));
+        $(".amtDue").text(newTaxTotal.toFixed(2));
+        let newChange = ($(".cashInput").val() - newTaxTotal).toFixed(2)
+        $(".changeDue").text(`$${newChange}`);
     });
 });
